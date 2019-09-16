@@ -16,7 +16,7 @@ class About extends Component {
     return (
       <Wrapper>
         <div className="aboutContainer">
-          <span>Portfolio</span>
+          <span>Hello, I'm</span>
           <span>Princewill Iroka</span>
           <span>
             I’m a dreamer and builder with remarkable talent and limitless

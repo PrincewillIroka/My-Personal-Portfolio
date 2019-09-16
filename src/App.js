@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css'
 import PortfolioPhoto from './components/PortfolioPhoto'
 import MainLayout from './components/MainLayout'
+import styled from 'styled-components'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 class App extends Component {
   appStyle = () => {
@@ -15,13 +17,29 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App" style={this.appStyle()}>
-          <PortfolioPhoto></PortfolioPhoto>
-          <MainLayout></MainLayout>
-        </div>
+        <Wrapper>
+          <div className="App" style={this.appStyle()}>
+            <div>
+              <PortfolioPhoto></PortfolioPhoto>
+            </div>
+            <div>
+              <MainLayout></MainLayout>
+            </div>
+          </div>
+        </Wrapper>
       </Provider>
     )
   }
 }
+
+const Wrapper = styled.div`
+  .App {
+    display: flex;
+    > div:nth-child(1) {
+      width: 30%;
+      background-color: #c0e2ed;
+    }
+  }
+`
 
 export default App

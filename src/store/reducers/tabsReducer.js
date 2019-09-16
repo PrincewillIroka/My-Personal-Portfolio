@@ -1,7 +1,7 @@
 import * as Actions from '../actions'
 
 const initialState = {
-  activeTab: 'About'
+  activeTab: 'Projects'
 }
 
 const tabsReducer = (state = initialState, action) => {
