@@ -3,6 +3,6 @@ import styled from 'styled-components'
 
 export default class Contact extends Component {
   render() {
-    return <div>Contact</div>
+    return <div>Contact Coming Soon</div>
   }
 }

@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import eLaundryApp from '../assets/images/projectImages/Screenshot_20190910-221244.png'
+import eLaundryWebsite from '../assets/images/projectImages/e-laundry_website.png'
+import medicalEquipmentWebsite from '../assets/images/projectImages/medical_equipment_system.png'
+import worldNewsApp from '../assets/images/projectImages/world_news_app.png'
 
 export default class Projects extends Component {
   render() {
@@ -8,11 +12,37 @@ export default class Projects extends Component {
         <div className="projectsContainer">
           <div>
             <div>
-              
+              <div
+                className="anImg"
+                style={{
+                  backgroundImage: 'url(' + eLaundryApp + ')'
+                }}
+              ></div>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+              <div
+                className="anImg"
+                style={{
+                  backgroundImage: 'url(' + eLaundryWebsite + ')'
+                }}
+              ></div>
+            </div>
+            <div>
+              <div
+                className="anImg"
+                style={{
+                  backgroundImage: 'url(' + medicalEquipmentWebsite + ')'
+                }}
+              ></div>
+            </div>
+            <div>
+              <div
+                className="anImg"
+                style={{
+                  backgroundImage: 'url(' + worldNewsApp + ')'
+                }}
+              ></div>
+            </div>
             <div></div>
             <div></div>
           </div>
@@ -29,11 +59,11 @@ const Wrapper = styled.div`
 
     > div:nth-child(1) {
       display: grid;
-      grid-template-columns: repeat(2, 45% [col-start]);
+      grid-template-columns: repeat(3, 30% [col-start]);
       grid-row-gap: 30px;
       grid-column-gap: 40px;
       max-height: 570px;
-      padding: 5% 0 5% 5%;
+      padding: 5% 2% 5% 5%;
 
       overflow-y: auto;
 
@@ -47,15 +77,21 @@ const Wrapper = styled.div`
             0 2px 7px 0 rgba(72, 22, 66, 0.1);
         }
 
-        
+        > div:nth-child(1) {
+          height: 70%;
+        }
 
+        > .anImg {
+          background-position: top left;
+          background-size: cover;
+          background-repeat: 'no-repeat';
+          width: 100%;
+        }
       }
 
       > div:last-child {
         margin-bottom: 30px;
       }
     }
-
-    
   }
 `

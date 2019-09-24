@@ -21,18 +21,23 @@ export default class PortfolioPhoto extends Component {
             className="portfolioPicture"
             style={this.portfolioPictureStyle()}
           />
-          <span>Princewill Iroka</span>
-          <span>Software Developer</span>
+          <span>Princewill Iroka</span> <span>Software Developer</span>
           <div>
             <span>
-              <i class="fas fa-dot-circle"></i>JavaScript(Node JS, Vue JS,
-              React)
+              <i class="fas fa-dot-circle"></i>Node JS, Vue JS, React
             </span>
             <span>
-              <i class="fas fa-dot-circle"></i>Mobile App Development(React
-              Native, Android(Java))
+              <i class="fas fa-dot-circle"></i>React Native, Android(Java)
+            </span>
+            <span>
+              <i class="fas fa-dot-circle"></i>Laravel
             </span>
           </div>
+          <span>
+            Developed by{' '}
+            <a href="https://twitter.com/princewiliroka/">Princewill Iroka</a>{' '}
+            with React JS
+          </span>
         </div>
       </Wrapper>
     )
@@ -68,6 +73,25 @@ const Wrapper = styled.div`
       width: 80%;
       font-size: 14px;
       color: #1c699b;
+
+      > span {
+        margin-bottom: 10px;
+      }
+
+      .fas {
+        margin-right: 5px;
+      }
+    }
+
+    > span:last-child {
+      position: fixed;
+      bottom: 3px;
+      font-size: 14px;
+      font-family: 'Fira Sans Extra Condensed', sans-serif;
+
+      > a {
+        color: #f44e91;
+      }
     }
   }
 `
