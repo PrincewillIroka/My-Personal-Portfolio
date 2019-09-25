@@ -25,7 +25,7 @@ export default class Contact extends Component {
               <div>
                 <textarea placeholder="Message"></textarea>
               </div>
-              <button onSubmit={}>Submit</button>
+              <button>Submit</button>
             </form>
           </div>
         </div>
