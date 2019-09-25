@@ -92,13 +92,10 @@ export default class Projects extends Component {
                 <span>Get news from top sites around the world.</span>
                 <div>
                   <span>Technologies used:</span>
-                  <span>React, News API</span>
+                  <span>React JS, News API</span>
                 </div>
                 <span>
-                  <a
-                    target="_blank"
-                    href="http://medical-equipment--system.herokuapp.com/"
-                  >
+                  <a target="_blank" href="https://worldnewsapp.netlify.com/">
                     View web app
                   </a>
                 </span>
