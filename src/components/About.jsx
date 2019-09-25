@@ -53,7 +53,7 @@ class About extends Component {
                 this.roundButtonClick(e, 'Projects')
               }}
             >
-              PORTFOLIO
+              MY RESUME
             </span>
           </div>
         </div>

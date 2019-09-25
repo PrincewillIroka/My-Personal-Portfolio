@@ -43,7 +43,7 @@ export default class Projects extends Component {
                 }}
               ></div>
               <div>
-                <span>e-Laundry Website</span>
+                <span>e-Laundry (Web App)</span>
                 <span>An online laundry services web app.</span>
                 <div>
                   <span>Technologies used:</span>
@@ -155,8 +155,9 @@ const Wrapper = styled.div`
 
           > span:nth-child(1) {
             font-weight: bold;
-            font-size: 14px;
+            font-size: 13px;
             color: #1c699b;
+            font-family: 'Poppins', sans-serif;
           }
 
           > span:nth-child(2) {
@@ -171,6 +172,7 @@ const Wrapper = styled.div`
             font-size: 13px;
             > span:nth-child(1) {
               margin-right: 5px;
+              font-weight: bold;
             }
           }
 
@@ -180,6 +182,7 @@ const Wrapper = styled.div`
             color: #f44e91;
             cursor: default;
             font-weight: bold;
+            font-family: 'Poppins', sans-serif;
           }
         }
       }
