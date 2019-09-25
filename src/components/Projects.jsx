@@ -18,6 +18,22 @@ export default class Projects extends Component {
                   backgroundImage: 'url(' + eLaundryApp + ')'
                 }}
               ></div>
+              <div>
+                <span>e-Laundry (Mobile App)</span>
+                <span>An online laundry services android app.</span>
+                <div>
+                  <span>Technologies used:</span>
+                  <span>Android(Java)</span>
+                </div>
+                <span>
+                  <a
+                    target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.princewill.e_laundry"
+                  >
+                    View app on Google Play Store
+                  </a>
+                </span>
+              </div>
             </div>
             <div>
               <div
@@ -26,6 +42,19 @@ export default class Projects extends Component {
                   backgroundImage: 'url(' + eLaundryWebsite + ')'
                 }}
               ></div>
+              <div>
+                <span>e-Laundry Website</span>
+                <span>An online laundry services web app.</span>
+                <div>
+                  <span>Technologies used:</span>
+                  <span>Laravel</span>
+                </div>
+                <span>
+                  <a target="_blank" href="https://e-laundry.com.ng">
+                    View web app
+                  </a>
+                </span>
+              </div>
             </div>
             <div>
               <div
@@ -34,6 +63,22 @@ export default class Projects extends Component {
                   backgroundImage: 'url(' + medicalEquipmentWebsite + ')'
                 }}
               ></div>
+              <div>
+                <span>Medical Equipment Management System</span>
+                <span>A web app for medical laboratories.</span>
+                <div>
+                  <span>Technologies used:</span>
+                  <span>Vue JS, Laravel</span>
+                </div>
+                <span>
+                  <a
+                    target="_blank"
+                    href="http://medical-equipment--system.herokuapp.com/"
+                  >
+                    View web app
+                  </a>
+                </span>
+              </div>
             </div>
             <div>
               <div
@@ -42,9 +87,25 @@ export default class Projects extends Component {
                   backgroundImage: 'url(' + worldNewsApp + ')'
                 }}
               ></div>
+              <div>
+                <span>World News App</span>
+                <span>Get news from top sites around the world.</span>
+                <div>
+                  <span>Technologies used:</span>
+                  <span>React, News API</span>
+                </div>
+                <span>
+                  <a
+                    target="_blank"
+                    href="http://medical-equipment--system.herokuapp.com/"
+                  >
+                    View web app
+                  </a>
+                </span>
+              </div>
             </div>
-            <div></div>
-            <div></div>
+            {/* <div></div>
+            <div></div> */}
           </div>
         </div>
       </Wrapper>
@@ -78,7 +139,7 @@ const Wrapper = styled.div`
         }
 
         > div:nth-child(1) {
-          height: 70%;
+          height: 65%;
         }
 
         > .anImg {
@@ -86,6 +147,43 @@ const Wrapper = styled.div`
           background-size: cover;
           background-repeat: 'no-repeat';
           width: 100%;
+        }
+
+        > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          padding: 7px 5px 5px 10px;
+          height: 35%;
+          align-items: center;
+
+          > span:nth-child(1) {
+            font-weight: bold;
+            font-size: 14px;
+            color: #1c699b;
+          }
+
+          > span:nth-child(2) {
+            font-size: 13px;
+            margin: 7px 0;
+          }
+
+          > div:nth-child(3) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            > span:nth-child(1) {
+              margin-right: 5px;
+            }
+          }
+
+          > span:nth-child(4) {
+            font-size: 13px;
+            margin-top: 7px;
+            color: #f44e91;
+            cursor: default;
+            font-weight: bold;
+          }
         }
       }
 

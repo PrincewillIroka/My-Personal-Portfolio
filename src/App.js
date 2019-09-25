@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './App.css'
-import PortfolioPhoto from './components/PortfolioPhoto'
+import Sidebar from './components/Sidebar'
 import MainLayout from './components/MainLayout'
 import styled from 'styled-components'
 import '@fortawesome/fontawesome-free/css/all.min.css'
@@ -20,7 +20,7 @@ class App extends Component {
         <Wrapper>
           <div className="App" style={this.appStyle()}>
             <div>
-              <PortfolioPhoto></PortfolioPhoto>
+              <Sidebar></Sidebar>
             </div>
             <div>
               <MainLayout></MainLayout>

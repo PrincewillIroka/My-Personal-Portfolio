@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import photo from '../assets/images/portfolio_pic2.jpg'
 import styled from 'styled-components'
 
-export default class PortfolioPhoto extends Component {
+export default class Sidebar extends Component {
   portfolioPictureStyle = () => {
     return {
       height: '250px',
@@ -35,7 +35,9 @@ export default class PortfolioPhoto extends Component {
           </div>
           <span>
             Developed by{' '}
-            <a href="https://twitter.com/princewiliroka/">Princewill Iroka</a>{' '}
+            <a target="_blank" href="https://twitter.com/princewiliroka/">
+              Princewill Iroka
+            </a>{' '}
             with React JS
           </span>
         </div>
