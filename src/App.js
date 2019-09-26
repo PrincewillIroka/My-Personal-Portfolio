@@ -39,6 +39,30 @@ const Wrapper = styled.div`
       width: 30%;
       background-color: #c0e2ed;
     }
+
+    @media (max-width: 576px) {
+      ${'' /* > div:nth-child(1) {
+        display: none;
+      } */}
+    }
+
+    @media (max-width: 768px) {
+      ${'' /* > div:nth-child(1) {
+        display: none;
+      } */}
+    }
+
+    @media (max-width: 992px) {
+      ${'' /* > div:nth-child(1) {
+        display: none;
+      } */}
+    }
+
+    @media (max-width: 1200px) {
+      ${'' /* > div:nth-child(1) {
+        display: none;
+      } */}
+    }
   }
 `
 

@@ -5,8 +5,8 @@ import styled from 'styled-components'
 export default class Sidebar extends Component {
   portfolioPictureStyle = () => {
     return {
-      height: '250px',
-      width: '250px',
+      height: '15.625rem',
+      width: '15.625rem',
       borderRadius: '50%'
     }
   }

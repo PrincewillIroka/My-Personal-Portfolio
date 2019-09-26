@@ -190,5 +190,17 @@ const Wrapper = styled.div`
         margin-bottom: 30px;
       }
     }
+
+    @media (max-width: 576px) {
+    }
+
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 992px) {
+    }
+
+    @media (max-width: 1200px) {
+    }
   }
 `

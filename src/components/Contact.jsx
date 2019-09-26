@@ -72,18 +72,16 @@ export default class Contact extends Component {
     }
   }
 
-  componentDidMount() {}
-
   render() {
     return (
       <Wrapper>
         <div className="aboutContainer">
-          <div>
+          <div className="helloContainer">
             <span>Hello !</span>
             <span>feel free to reach out to me, if you</span>
             <span>wish to talk about something.</span>
           </div>
-          <div>
+          <div className="formContainer">
             <span>Contact Me Now</span>
             <form>
               <span className="fill_field">
@@ -135,7 +133,7 @@ const Wrapper = styled.div`
     display: flex;
     padding: 5% 15% 0;
 
-    > div:nth-child(1) {
+    > .helloContainer {
       width: 40%;
       display: flex;
       flex-direction: column;
@@ -152,7 +150,7 @@ const Wrapper = styled.div`
       }
     }
 
-    > div:nth-child(2) {
+    > .formContainer {
       width: 60%;
       display: flex;
       flex-direction: column;
@@ -237,5 +235,19 @@ const Wrapper = styled.div`
         }
       }
     }
+
+    @media (max-width: 576px) {
+    }
+
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 992px) {
+    }
+
+    @media (max-width: 1200px) {
+      
+    }
+    
   }
 `

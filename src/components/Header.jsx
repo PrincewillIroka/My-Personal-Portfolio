@@ -36,13 +36,13 @@ class Header extends Component {
             >
               Contact
             </li>
-            <li
+            {/* <li
               onClick={e => this.headerItemClicked(e, 'Articles')}
               className={`headerLi ${this.props.activeTab === 'Articles' &&
                 'activeLi'}`}
             >
               Articles
-            </li>
+            </li> */}
           </ul>
         </div>
       </Wrapper>
@@ -68,7 +68,8 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Header)
-const Wrapper = styled.div` .headerContainer {
+const Wrapper = styled.div` 
+.headerContainer {
   padding-top: 30px;
 
   .headerUl {
@@ -93,6 +94,22 @@ const Wrapper = styled.div` .headerContainer {
       border-bottom: 2px solid #f44e91;
     }
   }
+
+  @media (max-width: 576px) {
+      
+    }
+
+    @media (max-width: 768px) {
+      
+    }
+
+    @media (max-width: 992px) {
+      
+    }
+
+    @media (max-width: 1200px) {
+      
+    }
 }
 
 `
