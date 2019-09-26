@@ -1,7 +1,79 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props)
+    this.state = this.initialState
+  }
+
+  initialState = {
+    name: '',
+    email: '',
+    message: '',
+    nameErrorField: false,
+    emailErrorField: false,
+    messageErrorField: false
+  }
+
+  handleUserInput(e) {
+    const name = e.target.name
+    const value = e.target.value
+    this.setState({
+      nameErrorField: false,
+      emailErrorField: false,
+      messageErrorField: false,
+      [name]: value
+    })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    if (!this.state.name) {
+      this.setState({
+        nameErrorField: true
+      })
+    } else if (!this.state.email) {
+      this.setState({
+        emailErrorField: true
+      })
+    } else if (!this.state.message) {
+      this.setState({
+        messageErrorField: true
+      })
+    } else {
+      axios
+        .post('https://mandrillapp.com/api/1.0/messages/send.json', {
+          data: {
+            key: '01a970aa2730f2cf9b638f9c483171f3-us20',
+            message: {
+              from_email: this.state.email,
+              to: [
+                {
+                  email: 'princewilliroka@outlook.com',
+                  name: this.state.name,
+                  type: 'to'
+                }
+              ],
+              autotext: 'true',
+              subject: `Princewill Iroka's Portfolio`,
+              html: this.state.message
+            }
+          }
+        })
+        .then(function(response) {
+          console.log(response)
+          this.setState(this.initialState)
+        })
+        .catch(function(response) {
+          console.log(`Error: ${response}`)
+        })
+    }
+  }
+
+  componentDidMount() {}
+
   render() {
     return (
       <Wrapper>
@@ -14,18 +86,42 @@ export default class Contact extends Component {
           <div>
             <span>Contact Me Now</span>
             <form>
+              <span className="fill_field">
+                {this.state.nameErrorField ? 'Please fill your name' : ''}
+              </span>
               <div>
                 <i className="fas fa-user"></i>
-                <input placeholder="Name" />
+                <input
+                  value={this.state.name}
+                  onChange={e => this.handleUserInput(e)}
+                  placeholder="Name"
+                  name="name"
+                />
               </div>
+              <span className="fill_field">
+                {this.state.emailErrorField ? 'Please fill your email' : ''}
+              </span>
               <div>
                 <i className="far fa-envelope"></i>
-                <input placeholder="Email" />
+                <input
+                  value={this.state.email}
+                  onChange={e => this.handleUserInput(e)}
+                  placeholder="Email"
+                  name="email"
+                />
               </div>
+              <span className="fill_field">
+                {this.state.messageErrorField ? 'Please fill your message' : ''}
+              </span>
               <div>
-                <textarea placeholder="Message"></textarea>
+                <textarea
+                  value={this.state.message}
+                  onChange={e => this.handleUserInput(e)}
+                  placeholder="Message"
+                  name="message"
+                ></textarea>
               </div>
-              <button>Submit</button>
+              <button onClick={e => this.handleSubmit(e)}>Submit</button>
             </form>
           </div>
         </div>
@@ -37,7 +133,7 @@ export default class Contact extends Component {
 const Wrapper = styled.div`
   .aboutContainer {
     display: flex;
-    padding: 7% 15% 0;
+    padding: 5% 15% 0;
 
     > div:nth-child(1) {
       width: 40%;
@@ -72,8 +168,8 @@ const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
 
-        > div:nth-child(1),
-        > div:nth-child(2) {
+        > div:nth-child(2),
+        > div:nth-child(4) {
           background-color: #ebeef1;
           height: 50px;
           border-radius: 20px;
@@ -98,7 +194,12 @@ const Wrapper = styled.div`
           }
         }
 
-        > div:nth-child(3) {
+        > .fill_field {
+          font-size: 13px;
+          color: #f33b86;
+        }
+
+        > div:nth-child(6) {
           background-color: #ebeef1;
           height: 150px;
           border-radius: 20px;
@@ -126,6 +227,7 @@ const Wrapper = styled.div`
           border: 1px solid transparent;
           font-size: 16px;
           font-weight: bold;
+          outline: none;
 
           &:hover {
             background-color: #fff;
