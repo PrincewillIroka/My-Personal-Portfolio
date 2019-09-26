@@ -122,7 +122,6 @@ const Wrapper = styled.div`
       grid-column-gap: 40px;
       max-height: 570px;
       padding: 5% 2% 5% 5%;
-
       overflow-y: auto;
 
       > div {
@@ -149,7 +148,7 @@ const Wrapper = styled.div`
         > div:nth-child(2) {
           display: flex;
           flex-direction: column;
-          padding: 7px 5px 5px 10px;
+          padding: 15px 5px 5px 10px;
           height: 35%;
           align-items: center;
 

@@ -15,11 +15,11 @@ export default class Contact extends Component {
             <span>Contact Me Now</span>
             <form>
               <div>
-                <i class="fas fa-user"></i>
+                <i className="fas fa-user"></i>
                 <input placeholder="Name" />
               </div>
               <div>
-                <i class="far fa-envelope"></i>
+                <i className="far fa-envelope"></i>
                 <input placeholder="Email" />
               </div>
               <div>

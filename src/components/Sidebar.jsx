@@ -24,13 +24,13 @@ export default class Sidebar extends Component {
           <span>Princewill Iroka</span> <span>Software Developer</span>
           <div>
             <span>
-              <i class="fas fa-dot-circle"></i>Node JS, Vue JS, React
+              <i className="fas fa-dot-circle"></i>Node JS, Vue JS, React
             </span>
             <span>
-              <i class="fas fa-dot-circle"></i>React Native, Android(Java)
+              <i className="fas fa-dot-circle"></i>React Native, Android(Java)
             </span>
             <span>
-              <i class="fas fa-dot-circle"></i>Laravel
+              <i className="fas fa-dot-circle"></i>Laravel
             </span>
           </div>
           <span>
@@ -87,7 +87,7 @@ const Wrapper = styled.div`
 
     > span:last-child {
       position: fixed;
-      bottom: 3px;
+      bottom: 10px;
       font-size: 14px;
       font-family: 'Fira Sans Extra Condensed', sans-serif;
 

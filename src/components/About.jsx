@@ -12,6 +12,13 @@ class About extends Component {
     this.props.toggleActiveTab(tab)
   }
 
+  downloadResume() {
+    const link = document.createElement('a')
+    link.href = './documents/Princewill_Iroka_Resume.pdf'
+    link.download = 'Princewill Iroka Resume'
+    link.dispatchEvent(new MouseEvent('click'))
+  }
+
   render() {
     return (
       <Wrapper>
@@ -47,14 +54,10 @@ class About extends Component {
             </a>
           </div>
           <div>
-            <span>HIRE ME</span>
-            <span
-              onClick={e => {
-                this.roundButtonClick(e, 'Projects')
-              }}
-            >
-              MY RESUME
+            <span onClick={e => this.roundButtonClick(e, 'Contact')}>
+              HIRE ME
             </span>
+            <span onClick={this.downloadResume}>MY RESUME</span>
           </div>
         </div>
       </Wrapper>
