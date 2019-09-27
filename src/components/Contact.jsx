@@ -46,7 +46,7 @@ export default class Contact extends Component {
       axios
         .post('https://mandrillapp.com/api/1.0/messages/send.json', {
           data: {
-            key: '01a970aa2730f2cf9b638f9c483171f3-us20',
+            key: '',
             message: {
               from_email: this.state.email,
               to: [
