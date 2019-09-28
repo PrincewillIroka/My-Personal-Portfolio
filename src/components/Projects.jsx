@@ -15,11 +15,43 @@ export default class Projects extends Component {
               <div
                 className="anImg"
                 style={{
+                  backgroundImage: 'url(' + worldNewsApp + ')'
+                }}
+              ></div>
+              <div>
+                <span>
+                  <a target="_blank" href="https://worldnewsapp.netlify.com/">
+                    World News App
+                  </a>
+                </span>
+                <span>Get news from top sites around the world.</span>
+                <div>
+                  <span>Technologies used:</span>
+                  <span>React JS, News API</span>
+                </div>
+                <span>
+                  <a target="_blank" href="https://worldnewsapp.netlify.com/">
+                    View web app
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div
+                className="anImg"
+                style={{
                   backgroundImage: 'url(' + eLaundryApp + ')'
                 }}
               ></div>
               <div>
-                <span>e-Laundry (Mobile App)</span>
+                <span>
+                  <a
+                    target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.princewill.e_laundry"
+                  >
+                    e-Laundry (Mobile App)
+                  </a>
+                </span>
                 <span>An online laundry services android app.</span>
                 <div>
                   <span>Technologies used:</span>
@@ -39,32 +71,18 @@ export default class Projects extends Component {
               <div
                 className="anImg"
                 style={{
-                  backgroundImage: 'url(' + eLaundryWebsite + ')'
-                }}
-              ></div>
-              <div>
-                <span>e-Laundry (Web App)</span>
-                <span>An online laundry services web app.</span>
-                <div>
-                  <span>Technologies used:</span>
-                  <span>Laravel</span>
-                </div>
-                <span>
-                  <a target="_blank" href="https://e-laundry.com.ng">
-                    View web app
-                  </a>
-                </span>
-              </div>
-            </div>
-            <div>
-              <div
-                className="anImg"
-                style={{
                   backgroundImage: 'url(' + medicalEquipmentWebsite + ')'
                 }}
               ></div>
               <div>
-                <span>Medical Equipment Management System</span>
+                <span>
+                  <a
+                    target="_blank"
+                    href="http://medical-equipment--system.herokuapp.com/"
+                  >
+                    Medical Equipment Mngt. System
+                  </a>
+                </span>
                 <span>A web app for medical laboratories.</span>
                 <div>
                   <span>Technologies used:</span>
@@ -84,25 +102,27 @@ export default class Projects extends Component {
               <div
                 className="anImg"
                 style={{
-                  backgroundImage: 'url(' + worldNewsApp + ')'
+                  backgroundImage: 'url(' + eLaundryWebsite + ')'
                 }}
               ></div>
               <div>
-                <span>World News App</span>
-                <span>Get news from top sites around the world.</span>
+                <span>
+                  <a target="_blank" href="https://e-laundry.com.ng">
+                    e-Laundry (Web App)
+                  </a>
+                </span>
+                <span>An online laundry services web app.</span>
                 <div>
                   <span>Technologies used:</span>
-                  <span>React JS, News API</span>
+                  <span>Laravel</span>
                 </div>
                 <span>
-                  <a target="_blank" href="https://worldnewsapp.netlify.com/">
+                  <a target="_blank" href="https://e-laundry.com.ng">
                     View web app
                   </a>
                 </span>
               </div>
             </div>
-            {/* <div></div>
-            <div></div> */}
           </div>
         </div>
       </Wrapper>
@@ -121,7 +141,7 @@ const Wrapper = styled.div`
       grid-row-gap: 30px;
       grid-column-gap: 40px;
       max-height: 570px;
-      padding: 5% 2% 5% 5%;
+      padding: 5% 2% 0 5%;
       overflow-y: auto;
 
       > div {
