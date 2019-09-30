@@ -27,7 +27,7 @@ class About extends Component {
           <span>Princewill Iroka</span>
           <span>
             It's my joy to see that the apps/tools that I develop(or collaborate
-            in a team to develop) is solving/providing solutions to real world
+            in a team to develop) are solving/providing solutions to real world
             problems for end-users.
           </span>
           <span>Find Me on</span>
