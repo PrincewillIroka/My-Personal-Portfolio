@@ -26,12 +26,9 @@ class About extends Component {
           <span>Hello, I'm</span>
           <span>Princewill Iroka</span>
           <span>
-            It's my joy to see that the apps/tools that I develop(or collaborate in a team to develop) 
-            is solving a problem for end-users. I’ve got remarkable talent and limitless
-            potential. With continuos zeal and diligence to grow personally and
-            professionally, offering excellent technical skills, and
-            collaboratively participating in teams that deliver software that
-            meets and surpasses expectations.
+            It's my joy to see that the apps/tools that I develop(or collaborate
+            in a team to develop) is solving/providing solutions to real world
+            problems for end-users.
           </span>
           <span>Find Me on</span>
           <div>

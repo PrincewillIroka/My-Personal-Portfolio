@@ -80,6 +80,15 @@ export default class Contact extends Component {
             <span>Hello !</span>
             <span>feel free to reach out to me, if you</span>
             <span>wish to talk about something.</span>
+            <div>
+              <span>OR</span>
+              <span>Send me a mail:</span>
+              <span>
+                <a href="mailto:princewilliroka@yahoo.com">
+                  princewilliroka@yahoo.com
+                </a>
+              </span>
+            </div>
           </div>
           <div className="formContainer">
             <span>Contact Me Now</span>
@@ -147,6 +156,26 @@ const Wrapper = styled.div`
       > span:nth-child(2),
       > span:nth-child(3) {
         font-size: 17px;
+      }
+
+      > div:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+
+        > span:nth-child(1) {
+          padding-left: 100px;
+          margin-top: 50px;
+        }
+
+        > span:nth-child(2) {
+          margin-top: 50px;
+          margin-bottom: 5px;
+        }
+
+        > span:nth-child(3) {
+          color: #f33b86;
+        }
       }
     }
 
@@ -246,8 +275,6 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 1200px) {
-      
     }
-    
   }
 `
