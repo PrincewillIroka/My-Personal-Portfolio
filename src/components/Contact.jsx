@@ -174,7 +174,7 @@ const Wrapper = styled.div`
         }
 
         > span:nth-child(3) {
-          color: #f33b86;
+          color: #1c699b;
         }
       }
     }
