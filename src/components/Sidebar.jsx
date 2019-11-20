@@ -1,50 +1,75 @@
 import React, { Component } from 'react'
 import photo from '../assets/images/portfolio_pic2.jpg'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+import { toggleMobileView } from '../store/actions'
 
-export default class Sidebar extends Component {
+class Sidebar extends Component {
   portfolioPictureStyle = () => {
     return {
-      height: '15.625rem',
-      width: '15.625rem',
+      height: '30%',
+      width: '65%',
       borderRadius: '50%'
     }
+  }
+
+  closeSidebar = () => {
+    this.props.closeSidebar()
   }
 
   render() {
     return (
       <Wrapper>
         <div className="portfolioContainer">
-          <img
-            src={photo}
-            alt="Portfolio"
-            className="portfolioPicture"
-            style={this.portfolioPictureStyle()}
-          />
-          <span>Princewill Iroka</span> <span>Software Developer</span>
-          <div>
-            <span>
-              <i className="fas fa-dot-circle"></i>Node JS, Vue JS, React
-            </span>
-            <span>
-              <i className="fas fa-dot-circle"></i>React Native, Android(Java)
-            </span>
-            <span>
-              <i className="fas fa-dot-circle"></i>Laravel
-            </span>
+          <div className="top-container">
+            <i className="fas fa-times" onClick={this.closeSidebar}></i>
           </div>
-          <span>
-            Developed by{' '}
-            <a target="_blank" href="https://twitter.com/princewiliroka/">
-              Princewill Iroka
+          <div className="n-container">
+            <img
+              src={photo}
+              alt="Portfolio"
+              className="portfolioPicture"
+              style={this.portfolioPictureStyle()}
+            />
+            <span className="f-span">Princewill Iroka</span>
+            <span className="s-span">Software Developer</span>
+            <div className="p-div">
+              <span>
+                <i className="fas fa-dot-circle"></i>Node JS, Vue JS, React
+            </span>
+              <span>
+                <i className="fas fa-dot-circle"></i>React Native, Android(Java)
+            </span>
+              <span>
+                <i className="fas fa-dot-circle"></i>Laravel
+            </span>
+            </div>
+            <span className="l-span">
+              Developed by{' '}
+              <a target="_blank" href="https://twitter.com/princewiliroka/">
+                Princewill Iroka
             </a>{' '}
-            with React JS
+              with React JS
           </span>
+          </div>
         </div>
       </Wrapper>
     )
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    closeSidebar: () => {
+      dispatch(toggleMobileView())
+    }
+  }
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Sidebar)
 
 const Wrapper = styled.div`
   .portfolioContainer {
@@ -52,23 +77,38 @@ const Wrapper = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    > span:nth-child(2) {
+    .top-container{
+      display:none;
+      justify-content:flex-end;
+      padding: 10px;
+    }
+
+    .fa-times{
+      font-size: 30px;
+    }
+
+    .n-container{
+      display: flex;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      > .f-span {
       margin-top: 20px;
       font-family: 'Pacifico', cursive;
-      font-size: 25px;
+      font-size: 1.4375rem;
       color: #1c699b;
     }
 
-    > span:nth-child(3) {
+    > .s-span {
       margin-top: 20px;
       font-size: 17px;
       color: #1c699b;
     }
 
-    > div:nth-child(4) {
+    > .p-div {
       margin-top: 40px;
       display: flex;
       flex-direction: column;
@@ -85,7 +125,7 @@ const Wrapper = styled.div`
       }
     }
 
-    > span:last-child {
+    > .l-span {
       position: fixed;
       bottom: 10px;
       font-size: 14px;
@@ -95,5 +135,37 @@ const Wrapper = styled.div`
         color: #f44e91;
       }
     }
+
   }
+
+  @media (max-width: 992px) {
+    .portfolioPicture{
+      height: 25% !important;
+      width: 80% !important;
+    }
+    .p-div{
+      font-size: 12px !important;
+    }
+    .l-span{
+      font-size:0.625rem !important;
+    }
+  }
+
+  @media (max-width: 785px) {
+    .top-container{
+      display:flex !important;
+    }
+    .portfolioPicture{
+      height: 30% !important;
+      width: 30% !important;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .portfolioPicture{
+      height: 30% !important;
+      width: 45% !important;
+    }
+  }
+
 `

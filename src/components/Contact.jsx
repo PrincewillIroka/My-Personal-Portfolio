@@ -62,11 +62,11 @@ export default class Contact extends Component {
             }
           }
         })
-        .then(function(response) {
+        .then(function (response) {
           console.log(response)
           this.setState(this.initialState)
         })
-        .catch(function(response) {
+        .catch(function (response) {
           console.log(`Error: ${response}`)
         })
     }
@@ -77,13 +77,16 @@ export default class Contact extends Component {
       <Wrapper>
         <div className="aboutContainer">
           <div className="helloContainer">
-            <span>Hello !</span>
-            <span>feel free to reach out to me, if you</span>
-            <span>wish to talk about something.</span>
-            <div>
-              <span>OR</span>
-              <span>Send me a mail:</span>
-              <span>
+            <div className="h-f-div">
+              <span>Hello !</span>
+              <span className="f-r-span">feel free to reach out to me, if you</span>
+              <span>wish to talk about something.</span>
+            </div>
+
+            <div className="h-s-div">
+              <span className="or-span">OR</span>
+              <span className="s-d-text">Send me a mail:</span>
+              <span className="m-l-text">
                 <a href="mailto:princewilliroka@yahoo.com">
                   princewilliroka@yahoo.com
                 </a>
@@ -141,39 +144,45 @@ const Wrapper = styled.div`
   .aboutContainer {
     display: flex;
     padding: 5% 15% 0;
+    height: 100vh;
+    overflow-y: auto;
 
     > .helloContainer {
       width: 40%;
       display: flex;
       flex-direction: column;
 
-      > span:nth-child(1) {
-        font-weight: bold;
-        font-size: 35px;
-        margin-bottom: 30px;
+      .h-f-div{
+        display: flex;
+        flex-direction: column;
+          > span:nth-child(1) {
+          font-weight: bold;
+          font-size: 35px;
+          margin-bottom: 30px;
+        }
+
+        > .f-r-span,
+        > span:nth-child(3) {
+          font-size: 17px;
+        }
       }
 
-      > span:nth-child(2),
-      > span:nth-child(3) {
-        font-size: 17px;
-      }
-
-      > div:nth-child(4) {
+      .h-s-div {
         display: flex;
         flex-direction: column;
         padding-top: 30px;
 
-        > span:nth-child(1) {
+        > .or-span {
           padding-left: 100px;
           margin-top: 50px;
         }
 
-        > span:nth-child(2) {
+        .s-d-text {
           margin-top: 50px;
           margin-bottom: 5px;
         }
 
-        > span:nth-child(3) {
+         .m-l-text {
           color: #1c699b;
         }
       }
@@ -230,7 +239,7 @@ const Wrapper = styled.div`
           background-color: #ebeef1;
           height: 150px;
           border-radius: 20px;
-          margin-bottom: 20px;
+          margin-bottom: 40px;
 
           > textarea {
             height: 100%;
@@ -265,16 +274,33 @@ const Wrapper = styled.div`
       }
     }
 
-    @media (max-width: 576px) {
+  }
+
+  @media (max-width: 600px) {
+    .aboutContainer{
+      flex-direction:column;
+      padding: 5% 5% 40%;
+    }
+    .helloContainer {
+      width: 100% !important;
+      flex-direction: row !important;
     }
 
-    @media (max-width: 768px) {
+    .formContainer {
+      width: 100% !important;
+      margin-top: 60px;
     }
-
-    @media (max-width: 992px) {
+    .h-f-div{
+      width: 45%;
     }
-
-    @media (max-width: 1200px) {
+    .h-s-div{
+      width: 58%;
+    }
+    .s-d-text {
+      margin-top: auto !important;
+    }
+    .or-span{
+      display:none;
     }
   }
 `

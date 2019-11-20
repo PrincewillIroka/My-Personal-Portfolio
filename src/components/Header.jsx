@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-
 import { connect } from 'react-redux'
-
-import { toggleActiveTab } from '../store/actions'
+import { toggleActiveTab, toggleMobileView } from '../store/actions'
 
 class Header extends Component {
   headerItemClicked = (e, tab) => {
     this.props.toggleActiveTab(tab)
+  }
+
+  openSidebar = () => {
+    this.props.openSidebar()
   }
 
   render() {
@@ -15,6 +17,9 @@ class Header extends Component {
       <Wrapper>
         <div className="headerContainer">
           <ul className="headerUl">
+            <li className="hamburger-btn">
+              <i class="fas fa-bars" onClick={this.openSidebar}></i>
+            </li>
             <li
               onClick={e => this.headerItemClicked(e, 'About')}
               className={`headerLi ${this.props.activeTab === 'About' &&
@@ -52,7 +57,8 @@ class Header extends Component {
 
 const mapStateToProps = state => {
   return {
-    activeTab: state.activeTab
+    activeTab: state.activeTab,
+    isMobileView: state.isMobileView
   }
 }
 
@@ -60,6 +66,9 @@ const mapDispatchToProps = dispatch => {
   return {
     toggleActiveTab: tab => {
       dispatch(toggleActiveTab(tab))
+    },
+    openSidebar: () => {
+      dispatch(toggleMobileView())
     }
   }
 }
@@ -78,15 +87,23 @@ const Wrapper = styled.div`
     justify-content: center;
     border-bottom: 2px solid #f0f0f0;
     user-select: none;
+    list-style-type:none;
+
+    .hamburger-btn{
+      margin-right: 60px;
+      align-self:flex-start;
+      display: none;
+      .fa-bars{
+        font-size: 25px;
+      }
+    }
 
     .headerLi {
-      list-style-type: none;
       margin-right: 60px;
       font-weight: bold;
       padding-bottom: 30px;
       cursor: default;
       font-family: font-family: 'Chilanka', cursive;
-      ;
     }
 
     .activeLi {
@@ -94,22 +111,16 @@ const Wrapper = styled.div`
       border-bottom: 2px solid #f44e91;
     }
   }
-
-  @media (max-width: 576px) {
-      
-    }
-
-    @media (max-width: 768px) {
-      
-    }
-
-    @media (max-width: 992px) {
-      
-    }
-
-    @media (max-width: 1200px) {
-      
-    }
 }
 
+@media (max-width: 785px) {
+  .hamburger-btn{
+    display: block !important;
+  }
+
+  .hamburger-btn, .headerLi{
+      margin-right: 40px !important;
+  }
+  
+}
 `

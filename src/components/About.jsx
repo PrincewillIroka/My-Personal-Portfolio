@@ -51,11 +51,11 @@ class About extends Component {
               <img src={photo3} alt="Instagram" />
             </a>
           </div>
-          <div>
-            <span onClick={e => this.roundButtonClick(e, 'Contact')}>
+          <div className='c-t-div'>
+            <span className="hire-span" onClick={e => this.roundButtonClick(e, 'Contact')}>
               HIRE ME
             </span>
-            <span onClick={this.downloadResume}>MY RESUME</span>
+            <span className="resume-span" onClick={this.downloadResume}>MY RESUME</span>
           </div>
         </div>
       </Wrapper>
@@ -139,12 +139,13 @@ const Wrapper = styled.div`
       }
     }
 
-    > div:nth-child(6) {
+     .c-t-div {
+       display:flex;
       margin-top: 60px;
       > span {
         cursor: default;
       }
-      > span:nth-child(1) {
+       .hire-span {
         background-color: #f33b86;
         border-radius: 50px;
         padding: 15px 40px;
@@ -159,7 +160,7 @@ const Wrapper = styled.div`
         }
       }
 
-      > span:nth-child(2) {
+       .resume-span {
         border: 1px solid #f33b86;
         border-radius: 50px;
         padding: 15px 30px;
@@ -171,6 +172,25 @@ const Wrapper = styled.div`
           color: #fff;
         }
       }
+    }
+
+  }
+
+  @media (max-width: 600px) {
+    .aboutContainer {
+      padding: 30px !important;
+    }
+  }
+
+  @media (max-width: 785px) {
+    .aboutContainer {
+      padding: 60px ;
+    }
+    .hire-span {
+      padding: 15px 25px !important;
+    }
+    .resume-span{
+      padding: 15px 20px !important;
     }
   }
 `

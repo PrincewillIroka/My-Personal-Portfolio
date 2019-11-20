@@ -1,7 +1,8 @@
 import * as Actions from '../actions'
 
 const initialState = {
-  activeTab: 'About'
+  activeTab: 'About',
+  isMobileView: false
 }
 
 const tabsReducer = (state = initialState, action) => {
@@ -10,6 +11,12 @@ const tabsReducer = (state = initialState, action) => {
       return {
         ...state,
         activeTab: action.payload
+      }
+    }
+    case Actions.CHANGEMOBILEVIEW: {
+      return {
+        ...state,
+        isMobileView: !state.isMobileView
       }
     }
     default: {
