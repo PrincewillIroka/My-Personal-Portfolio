@@ -32,20 +32,20 @@ class About extends Component {
           </span>
           <span>Find Me on</span>
           <div>
-            <a target="_blank" href="https://twitter.com/PrincewilIroka">
+            <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/PrincewilIroka">
               <img src={photo} alt="Twitter" />
             </a>
-            <a target="_blank" href="https://github.com/PrincewillIroka">
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/PrincewillIroka">
               <img src={photo1} alt="GitHub" />
             </a>
             <a
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://www.linkedin.com/in/princewill-iroka-19865784/"
             >
               <img src={photo2} alt="LinkedIn" />
             </a>
             <a
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
               href="https://www.instagram.com/princewilliroka/"
             >
               <img src={photo3} alt="Instagram" />

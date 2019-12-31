@@ -18,7 +18,7 @@ class Header extends Component {
         <div className="headerContainer">
           <ul className="headerUl">
             <li className="hamburger-btn">
-              <i class="fas fa-bars" onClick={this.openSidebar}></i>
+              <i className="fas fa-bars" onClick={this.openSidebar}></i>
             </li>
             <li
               onClick={e => this.headerItemClicked(e, 'About')}

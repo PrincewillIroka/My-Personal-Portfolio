@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import eLaundryApp from '../assets/images/projectImages/Screenshot_20190910-221244.png'
+import worldUniversities from '../assets/images/projectImages/world-universities.png'
 import eLaundryWebsite from '../assets/images/projectImages/e-laundry_website.png'
 import medicalEquipmentWebsite from '../assets/images/projectImages/medical_equipment_system.png'
 import worldNewsApp from '../assets/images/projectImages/world_news_app.png'
@@ -21,7 +22,7 @@ export default class Projects extends Component {
                 ></div>
                 <div className="text-container">
                   <span>
-                    <a target="_blank" href="https://worldnewsapp.netlify.com/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://worldnewsapp.netlify.com/">
                       World News App
                   </a>
                   </span>
@@ -31,8 +32,39 @@ export default class Projects extends Component {
                     <span>React, News API</span>
                   </div>
                   <span>
-                    <a target="_blank" href="https://worldnewsapp.netlify.com/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://worldnewsapp.netlify.com/">
                       View web app
+                  </a>
+                  </span>
+                </div>
+              </div>
+              <div className='item-container'>
+                <div
+                  className="anImg"
+                  style={{
+                    backgroundImage: 'url(' + worldUniversities + ')'
+                  }}
+                ></div>
+                <div className="text-container">
+                  <span>
+                    <a
+                      target="_blank" rel="noopener noreferrer"
+                      href="https://play.google.com/store/apps/details?id=com.princewilliroka.worlduniversitiesapp"
+                    >
+                      World Universities (Mobile App)
+                  </a>
+                  </span>
+                  <span>Thousands of top Universities around the World.</span>
+                  <div>
+                    <span>Technologies used:</span>
+                    <span>React Native</span>
+                  </div>
+                  <span>
+                    <a
+                      target="_blank" rel="noopener noreferrer"
+                      href="https://play.google.com/store/apps/details?id=com.princewilliroka.worlduniversitiesapp"
+                    >
+                      View app on Google Play Store
                   </a>
                   </span>
                 </div>
@@ -47,7 +79,7 @@ export default class Projects extends Component {
                 <div className="text-container">
                   <span>
                     <a
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       href="https://play.google.com/store/apps/details?id=com.princewill.e_laundry"
                     >
                       e-Laundry (Mobile App)
@@ -60,7 +92,7 @@ export default class Projects extends Component {
                   </div>
                   <span>
                     <a
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       href="https://play.google.com/store/apps/details?id=com.princewill.e_laundry"
                     >
                       View app on Google Play Store
@@ -78,7 +110,7 @@ export default class Projects extends Component {
                 <div className="text-container">
                   <span>
                     <a
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       href="http://medical-equipment--system.herokuapp.com/"
                     >
                       Medical Equipment Management System
@@ -91,7 +123,7 @@ export default class Projects extends Component {
                   </div>
                   <span>
                     <a
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       href="http://medical-equipment--system.herokuapp.com/"
                     >
                       View web app
@@ -108,7 +140,7 @@ export default class Projects extends Component {
                 ></div>
                 <div className="text-container">
                   <span>
-                    <a target="_blank" href="https://e-laundry.com.ng">
+                    <a target="_blank" rel="noopener noreferrer" href="https://e-laundry.com.ng">
                       e-Laundry (Web App)
                   </a>
                   </span>
@@ -118,7 +150,7 @@ export default class Projects extends Component {
                     <span>Laravel</span>
                   </div>
                   <span>
-                    <a target="_blank" href="https://e-laundry.com.ng">
+                    <a target="_blank" rel="noopener noreferrer" href="https://e-laundry.com.ng">
                       View web app
                   </a>
                   </span>

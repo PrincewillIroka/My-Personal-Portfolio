@@ -35,18 +35,18 @@ class Sidebar extends Component {
             <span className="s-span">Software Developer</span>
             <div className="p-div">
               <span>
-                <i className="fas fa-dot-circle"></i>Node JS, Vue JS, React
+                <i className="fas fa-dot-circle"></i>React, Vue JS
             </span>
               <span>
-                <i className="fas fa-dot-circle"></i>React Native, Android(Java)
+                <i className="fas fa-dot-circle"></i>React Native
             </span>
               <span>
-                <i className="fas fa-dot-circle"></i>Laravel
+                <i className="fas fa-dot-circle"></i>Node JS
             </span>
             </div>
             <span className="l-span">
               Developed by{' '}
-              <a target="_blank" href="https://twitter.com/princewiliroka/">
+              <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/princewiliroka/">
                 Princewill Iroka
             </a>{' '}
               with React JS
@@ -138,10 +138,24 @@ const Wrapper = styled.div`
 
   }
 
+  @media (min-width: 1160px) {
+    .portfolioPicture{
+      height: 32% !important;
+      width: 50% !important;
+    }
+  }
+
+  @media (max-width: 1160px) {
+    .portfolioPicture{
+      height: 30% !important;
+      width: 60% !important;
+    }
+  }
+
   @media (max-width: 992px) {
     .portfolioPicture{
-      height: 25% !important;
-      width: 80% !important;
+      height: 30% !important;
+      width: 65% !important;
     }
     .p-div{
       font-size: 12px !important;
@@ -151,19 +165,40 @@ const Wrapper = styled.div`
     }
   }
 
+  @media (max-width: 880px) {
+    .portfolioPicture{
+      height: 30% !important;
+      width: 75% !important;
+    }
+  }
+
   @media (max-width: 785px) {
     .top-container{
       display:flex !important;
     }
     .portfolioPicture{
-      height: 30% !important;
+      height: 40% !important;
+      width: 25% !important;
+    }
+  }
+
+  @media (max-width: 670px) {
+    .portfolioPicture{
+      height: 40% !important;
       width: 30% !important;
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 490px) {
     .portfolioPicture{
-      height: 30% !important;
+      height: 40% !important;
+      width: 40% !important;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .portfolioPicture{
+      height: 40% !important;
       width: 45% !important;
     }
   }
