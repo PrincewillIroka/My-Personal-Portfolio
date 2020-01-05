@@ -138,10 +138,17 @@ const Wrapper = styled.div`
 
   }
 
-  @media (min-width: 1160px) {
+  @media (min-width: 1326px) {
     .portfolioPicture{
       height: 32% !important;
-      width: 50% !important;
+      width: 65% !important;
+    }
+  }
+
+  @media (max-width: 1326px) {
+    .portfolioPicture{
+      height: 35% !important;
+      width: 55% !important;
     }
   }
 
@@ -186,6 +193,13 @@ const Wrapper = styled.div`
     .portfolioPicture{
       height: 40% !important;
       width: 30% !important;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .portfolioPicture{
+      height: 40% !important;
+      width: 35% !important;
     }
   }
 
