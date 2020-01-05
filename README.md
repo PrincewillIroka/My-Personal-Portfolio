@@ -1,6 +1,6 @@
 ## Princewill Iroka's personal portfolio. 
 ### Live
-https://princewilliroka.com/ \ \
+https://princewilliroka.com/ \
 ![Princewill Iroka Portfolio](https://imgur.com/qsbmVZB.png)
 ### Author
 Developed by [Princewill Iroka](https://princewilliroka.com/).
