@@ -192,7 +192,7 @@ const Wrapper = styled.div`
   @media (max-width: 670px) {
     .portfolioPicture{
       height: 40% !important;
-      width: 30% !important;
+      width: 28% !important;
     }
   }
 
@@ -206,14 +206,28 @@ const Wrapper = styled.div`
   @media (max-width: 490px) {
     .portfolioPicture{
       height: 40% !important;
-      width: 40% !important;
+      width: 38% !important;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .portfolioPicture{
+      height: 40% !important;
+      width: 42% !important;
     }
   }
 
   @media (max-width: 400px) {
     .portfolioPicture{
-      height: 40% !important;
-      width: 45% !important;
+      height: 35% !important;
+      width: 55% !important;
+    }
+  }
+
+  @media (max-width: 398px) {
+    .portfolioPicture{
+      height: 30% !important;
+      width: 48% !important;
     }
   }
 

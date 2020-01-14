@@ -22,57 +22,60 @@ class About extends Component {
   render() {
     return (
       <Wrapper>
-        <div className="aboutContainer">
-          <span>Hello, I'm</span>
-          <span>Princewill Iroka</span>
-          <span>
-            I am a productive Software Developer who is passionate about
-            developing scalable, maintainable, cutting-edge web and mobile
-            apps. Using flexible modern Software Architecture principles, I can
-            work in a team or with minimal supervision to deliver high quality
-            software products that meets and exceeds users expectation.
-          </span>
-          <span>Find Me on</span>
-          <div>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://twitter.com/PrincewilIroka"
-            >
-              <img src={photo} alt="Twitter" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/PrincewillIroka"
-            >
-              <img src={photo1} alt="GitHub" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/princewill-iroka-19865784/"
-            >
-              <img src={photo2} alt="LinkedIn" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/princewilliroka/"
-            >
-              <img src={photo3} alt="Instagram" />
-            </a>
-          </div>
-          <div className="c-t-div">
-            <span
-              className="hire-span"
-              onClick={e => this.roundButtonClick(e, "Contact")}
-            >
-              HIRE ME
+        <div className="about-container">
+          <div className="parent-container">
+            <span>Hello, I'm</span>
+            <span>Princewill Iroka</span>
+            <span>
+              I am a productive Software Developer who is passionate about
+              developing scalable, maintainable, cutting-edge web and mobile
+              apps. Using flexible modern Software Architecture principles, I
+              can work in a team or with minimal supervision to deliver high
+              quality software products that meets and exceeds users
+              expectation.
             </span>
-            <span className="resume-span" onClick={this.downloadResume}>
-              MY RESUME
-            </span>
+            <span>Find Me on</span>
+            <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/PrincewilIroka"
+              >
+                <img src={photo} alt="Twitter" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/PrincewillIroka"
+              >
+                <img src={photo1} alt="GitHub" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/princewill-iroka-19865784/"
+              >
+                <img src={photo2} alt="LinkedIn" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/princewilliroka/"
+              >
+                <img src={photo3} alt="Instagram" />
+              </a>
+            </div>
+            <div className="c-t-div">
+              <span
+                className="hire-span"
+                onClick={e => this.roundButtonClick(e, "Contact")}
+              >
+                HIRE ME
+              </span>
+              <span className="resume-span" onClick={this.downloadResume}>
+                MY RESUME
+              </span>
+            </div>
           </div>
         </div>
       </Wrapper>
@@ -91,119 +94,125 @@ const mapDispatchToProps = dispatch => {
 export default connect(null, mapDispatchToProps)(About);
 
 const Wrapper = styled.div`
-  .aboutContainer {
+  .about-container {
     display: flex;
-    flex-direction: column;
-    padding: 70px 22% 0;
 
-    > span:nth-child(1) {
-      color: #707070;
-      font-size: 17px;
-      font-family: "Rubik", sans-serif;
-    }
-
-    > span:nth-child(2) {
-      color: #f44e91;
-      font-weight: bold;
-      font-size: 20px;
-      font-family: "Roboto", sans-serif;
-    }
-
-    > span:nth-child(3) {
-      color: #707070;
-      font-family: "Rubik", sans-serif;
-      font-size: 17px;
-    }
-
-    > span:nth-child(4) {
-      color: #707070;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 18px;
-    }
-
-    > span:nth-child(2),
-    > span:nth-child(3),
-    > span:nth-child(4) {
-      margin-top: 25px;
-    }
-
-    > div:nth-child(5) {
+    .parent-container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      padding: 70px 22% 0;
+      height: 100vh;
+      overflow-y: auto;
 
-      a:nth-child(1) img {
-        height: 40px;
-        width: 40px;
+      > span:nth-child(1) {
+        color: #707070;
+        font-size: 17px;
+        font-family: "Rubik", sans-serif;
       }
 
-      a:nth-child(2) img {
-        height: 50px;
-        width: 50px;
+      > span:nth-child(2) {
+        color: #f44e91;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: "Roboto", sans-serif;
       }
 
-      a:nth-child(3) img {
-        height: 35px;
-        width: 45px;
+      > span:nth-child(3) {
+        color: #707070;
+        font-family: "Rubik", sans-serif;
+        font-size: 17px;
       }
 
-      a:nth-child(4) img {
-        height: 35px;
-        width: 35px;
+      > span:nth-child(4) {
+        color: #707070;
+        font-family: "Fira Sans", sans-serif;
+        font-size: 18px;
+      }
+
+      > span:nth-child(2),
+      > span:nth-child(3),
+      > span:nth-child(4) {
+        margin-top: 25px;
+      }
+
+      > div:nth-child(5) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a:nth-child(1) img {
+          height: 40px;
+          width: 40px;
+        }
+
+        a:nth-child(2) img {
+          height: 50px;
+          width: 50px;
+        }
+
+        a:nth-child(3) img {
+          height: 35px;
+          width: 45px;
+        }
+
+        a:nth-child(4) img {
+          height: 35px;
+          width: 35px;
+        }
+      }
+
+      .c-t-div {
+        display: flex;
+        margin: 60px 0 100px;
+        > span {
+          cursor: default;
+        }
+        .hire-span {
+          background-color: #f33b86;
+          border-radius: 50px;
+          padding: 15px 40px;
+          color: #fff;
+          margin-right: 30px;
+          border: 1px solid transparent;
+
+          &:hover {
+            background-color: #fff;
+            border: 1px solid #f33b86;
+            color: #f33b86;
+          }
+        }
+
+        .resume-span {
+          border: 1px solid #f33b86;
+          border-radius: 50px;
+          padding: 15px 30px;
+          color: #f33b86;
+
+          &:hover {
+            background-color: #f33b86;
+            border: 1px solid transparent;
+            color: #fff;
+          }
+        }
       }
     }
 
-    .c-t-div {
-      display: flex;
-      margin-top: 60px;
-      > span {
-        cursor: default;
+    @media (max-width: 600px) {
+      .parent-container {
+        padding: 60px 30px 80px !important;
+      }
+    }
+
+    @media (max-width: 785px) {
+      .parent-container {
+        padding: 60px;
       }
       .hire-span {
-        background-color: #f33b86;
-        border-radius: 50px;
-        padding: 15px 40px;
-        color: #fff;
-        margin-right: 30px;
-        border: 1px solid transparent;
-
-        &:hover {
-          background-color: #fff;
-          border: 1px solid #f33b86;
-          color: #f33b86;
-        }
+        padding: 15px 25px !important;
       }
-
       .resume-span {
-        border: 1px solid #f33b86;
-        border-radius: 50px;
-        padding: 15px 30px;
-        color: #f33b86;
-
-        &:hover {
-          background-color: #f33b86;
-          border: 1px solid transparent;
-          color: #fff;
-        }
+        padding: 15px 20px !important;
       }
-    }
-  }
-
-  @media (max-width: 600px) {
-    .aboutContainer {
-      padding: 30px !important;
-    }
-  }
-
-  @media (max-width: 785px) {
-    .aboutContainer {
-      padding: 60px;
-    }
-    .hire-span {
-      padding: 15px 25px !important;
-    }
-    .resume-span {
-      padding: 15px 20px !important;
     }
   }
 `;

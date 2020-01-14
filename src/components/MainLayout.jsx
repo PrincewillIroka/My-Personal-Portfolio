@@ -12,7 +12,7 @@ class MainLayout extends Component {
     return (
       <Wrapper>
         <div className="container">
-          <Header></Header>
+          <Header/>
           <ActiveComponent activeTab={this.props.activeTab} />
         </div>
       </Wrapper>

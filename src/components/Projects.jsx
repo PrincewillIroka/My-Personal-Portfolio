@@ -10,7 +10,7 @@ export default class Projects extends Component {
   render() {
     return (
       <Wrapper>
-        <div className="projectsContainer">
+        <div className="projects-container">
           <div className='parent-container'>
             <div className='m-container'>
               <div className='item-container'>
@@ -165,7 +165,7 @@ export default class Projects extends Component {
 }
 
 const Wrapper = styled.div`
-  .projectsContainer {
+  .projects-container {
     display: flex;
     align-items: center;    
 
