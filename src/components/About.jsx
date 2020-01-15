@@ -31,7 +31,7 @@ class About extends Component {
               developing scalable, maintainable, cutting-edge web and mobile
               apps. Using flexible modern Software Architecture principles, I
               can work in a team or with minimal supervision to deliver high
-              quality software products that meets and exceeds users
+              quality software products that meets and exceeds users'
               expectation.
             </span>
             <span>Find Me on</span>
