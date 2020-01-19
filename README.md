@@ -1,4 +1,5 @@
 ## Princewill Iroka's personal portfolio. 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ### Live
 https://princewilliroka.com/ \
 ![Princewill Iroka Portfolio](https://imgur.com/qsbmVZB.png)
