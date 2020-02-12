@@ -57,7 +57,7 @@ export default class Projects extends Component {
                   <span>Thousands of top Universities around the World.</span>
                   <div>
                     <span>Technologies used:</span>
-                    <span>React Native</span>
+                    <span>React Native, Hooks</span>
                   </div>
                   <span>
                     <a
