@@ -12,12 +12,12 @@ class About extends Component {
     this.props.toggleActiveTab(tab);
   }
 
-  downloadResume() {
-    const link = document.createElement("a");
-    link.href = "./documents/Princewill_Iroka_Resume.pdf";
-    link.download = "Princewill Iroka Resume";
-    link.dispatchEvent(new MouseEvent("click"));
-  }
+  // downloadResume() {
+  //   const link = document.createElement("a");
+  //   link.href = "./documents/Princewill_Iroka_Resume.pdf";
+  //   link.download = "Princewill Iroka Resume";
+  //   link.dispatchEvent(new MouseEvent("click"));
+  // }
 
   render() {
     return (
@@ -72,9 +72,9 @@ class About extends Component {
               >
                 HIRE ME
               </span>
-              <span className="resume-span" onClick={this.downloadResume}>
+              <a className="resume-link" target="_blank" href="https://drive.google.com/open?id=1uBx5NHt0po_osHWxYuaeVDCDvzGDR8Rl">
                 MY RESUME
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@ const Wrapper = styled.div`
           }
         }
 
-        .resume-span {
+        .resume-link {
           border: 1px solid #f33b86;
           border-radius: 50px;
           padding: 15px 30px;
@@ -210,7 +210,7 @@ const Wrapper = styled.div`
       .hire-span {
         padding: 15px 25px !important;
       }
-      .resume-span {
+      .resume-link {
         padding: 15px 20px !important;
       }
     }
