@@ -72,9 +72,9 @@ class About extends Component {
               >
                 HIRE ME
               </span>
-              <a className="resume-link" target="_blank" href="https://drive.google.com/open?id=1uBx5NHt0po_osHWxYuaeVDCDvzGDR8Rl">
+              {/* <a className="resume-link" target="_blank" href="https://drive.google.com/open?id=1uBx5NHt0po_osHWxYuaeVDCDvzGDR8Rl">
                 MY RESUME
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
