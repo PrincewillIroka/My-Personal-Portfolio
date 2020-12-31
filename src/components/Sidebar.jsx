@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
-import photo from '../assets/images/portfolio_pic2.jpg'
-import styled from 'styled-components'
-import { connect } from 'react-redux'
-import { toggleMobileView } from '../store/actions'
+import React, { Component } from "react";
+import photo from "../assets/images/portfolio_pic2.jpg";
+import styled from "styled-components";
+import { connect } from "react-redux";
+import { toggleMobileView } from "../store/actions";
 
 class Sidebar extends Component {
   portfolioPictureStyle = () => {
     return {
-      height: '30%',
-      width: '65%',
-      borderRadius: '50%'
-    }
-  }
+      height: "30%",
+      width: "65%",
+      borderRadius: "50%",
+    };
+  };
 
   closeSidebar = () => {
-    this.props.closeSidebar()
-  }
+    this.props.closeSidebar();
+  };
 
   render() {
     return (
@@ -32,44 +32,45 @@ class Sidebar extends Component {
               style={this.portfolioPictureStyle()}
             />
             <span className="f-span">Princewill Iroka</span>
-            <span className="s-span">Software Developer</span>
+            <span className="s-span">Senior Software Engineer</span>
             <div className="p-div">
               <span>
-                <i className="fas fa-dot-circle"></i>React, Vue JS
-            </span>
+                <i className="fas fa-dot-circle"></i>React, React Native
+              </span>
               <span>
-                <i className="fas fa-dot-circle"></i>React Native
-            </span>
+                <i className="fas fa-dot-circle"></i>Vue JS
+              </span>
               <span>
                 <i className="fas fa-dot-circle"></i>Node JS
-            </span>
+              </span>
             </div>
             <span className="l-span">
-              Developed by{' '}
-              <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/princewiliroka/">
-                Princewill Iroka
-            </a>{' '}
+              Developed by{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/princewiliroka/"
+              >
+                <b>Princewill Iroka</b>
+              </a>{" "}
               with React JS
-          </span>
+            </span>
           </div>
         </div>
       </Wrapper>
-    )
+    );
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     closeSidebar: () => {
-      dispatch(toggleMobileView())
-    }
-  }
-}
+      dispatch(toggleMobileView());
+    },
+  };
+};
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Sidebar)
+export default connect(null, mapDispatchToProps)(Sidebar);
 
 const Wrapper = styled.div`
   .portfolioContainer {
@@ -231,4 +232,4 @@ const Wrapper = styled.div`
     }
   }
 
-`
+`;

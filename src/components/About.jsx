@@ -3,7 +3,8 @@ import styled from "styled-components";
 import photo from "../assets/images/Twitter_Social_Icon_Circle_Color.png";
 import photo1 from "../assets/images/GitHub-Mark.png";
 import photo2 from "../assets/images/LI-In-Bug.png";
-import photo3 from "../assets/images/Instagram_AppIcon_Aug2017.png";
+import photo3 from "../assets/images/Stack_Overflow_icon.png";
+import photo4 from "../assets/images/dev.to-icon.png";
 import { connect } from "react-redux";
 import { toggleActiveTab } from "../store/actions";
 
@@ -60,9 +61,16 @@ class About extends Component {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/princewilliroka/"
+                href="https://stackoverflow.com/users/5994977/princewill-iroka"
               >
-                <img src={photo3} alt="Instagram" />
+                <img src={photo3} alt="Stackoverflow" />
+              </a>              
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://dev.to/princewilliroka"
+              >
+                <img src={photo4} alt="Dev.to" />
               </a>
             </div>
             <div className="c-t-div">
