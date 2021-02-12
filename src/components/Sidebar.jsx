@@ -45,14 +45,14 @@ class Sidebar extends Component {
               </span>
             </div>
             <span className="l-span">
-              Developed by{" "}
+              Developed by
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://twitter.com/princewiliroka/"
+                href="https://twitter.com/princewilliroka/"
               >
                 <b>Princewill Iroka</b>
-              </a>{" "}
+              </a>
               with React JS
             </span>
           </div>

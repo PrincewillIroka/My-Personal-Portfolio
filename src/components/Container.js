@@ -1,43 +1,44 @@
-import React, { Component } from 'react'
-import Sidebar from './Sidebar'
-import MainLayout from './MainLayout'
-import styled from 'styled-components'
-import '@fortawesome/fontawesome-free/css/all.min.css'
-import { connect } from 'react-redux'
+import React, { Component } from "react";
+import styled from "styled-components";
+import { connect } from "react-redux";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import Sidebar from "./Sidebar";
+import MainLayout from "./MainLayout";
 
 class Container extends Component {
-    appStyle = () => {
-        return {
-            display: 'flex'
-        }
-    }
-    render() {
-        return (
-            <Wrapper>
-                <div className="App" style={this.appStyle()}>
-                    <div className={`${this.props.isMobileView ? 'sidebar' : 'hiddenSidebar'}`}>
-                        <Sidebar></Sidebar>
-                    </div>
-                    <div className="mainlayout">
-                        <MainLayout></MainLayout>
-                    </div>
-                </div>
-            </Wrapper>
-        )
-    }
-}
-
-const mapStateToProps = state => {
+  appStyle = () => {
     return {
-        activeTab: state.activeTab,
-        isMobileView: state.isMobileView
-    }
+      display: "flex",
+    };
+  };
+  render() {
+    return (
+      <Wrapper>
+        <div className="App" style={this.appStyle()}>
+          <div
+            className={`${
+              this.props.isMobileView ? "sidebar" : "hiddenSidebar"
+            }`}
+          >
+            <Sidebar></Sidebar>
+          </div>
+          <div className="mainlayout">
+            <MainLayout></MainLayout>
+          </div>
+        </div>
+      </Wrapper>
+    );
+  }
 }
 
-export default connect(
-    mapStateToProps,
-    null
-)(Container)
+const mapStateToProps = (state) => {
+  return {
+    activeTab: state.activeTab,
+    isMobileView: state.isMobileView,
+  };
+};
+
+export default connect(mapStateToProps, null)(Container);
 
 const Wrapper = styled.div`
   .App {
@@ -51,13 +52,13 @@ const Wrapper = styled.div`
       .sidebar {
         position: fixed;
         top: 0;
-        left:0;
+        left: 0;
         width: 95% !important;
       }
 
-        .hiddenSidebar{
-            display: none;
-        }
+      .hiddenSidebar {
+        display: none;
+      }
     }
   }
-`
+`;

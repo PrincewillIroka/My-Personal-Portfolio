@@ -40,7 +40,7 @@ class About extends Component {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://twitter.com/PrincewilIroka"
+                href="https://twitter.com/PrincewillIroka"
               >
                 <img src={photo} alt="Twitter" />
               </a>
