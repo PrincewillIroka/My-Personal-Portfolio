@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import photo from "../assets/images/portfolio_pic2.jpg";
+import photo from "../assets/images/princewill_iroka.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { toggleMobileView } from "../store/actions";
@@ -51,7 +51,7 @@ class Sidebar extends Component {
                 rel="noopener noreferrer"
                 href="https://twitter.com/princewilliroka/"
               >
-                <b>Princewill Iroka</b>
+                <span> Princewill Iroka </span>
               </a>
               with React JS
             </span>
