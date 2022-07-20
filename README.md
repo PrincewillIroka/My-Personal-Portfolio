@@ -3,7 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/db8eb64c-a668-4f75-a5d1-2998e5b0f898/deploy-status)](https://app.netlify.com/sites/princewill-iroka/deploys)
 ### Live
 https://princewilliroka.com/ \
-![Princewill Iroka Portfolio](https://imgur.com/qsbmVZB.png)
+![Princewill Iroka Portfolio](https://i.imgur.com/g3xgAlv.png)
 ### Author
 Developed by [Princewill Iroka](https://princewilliroka.com/).
 ### Credit
