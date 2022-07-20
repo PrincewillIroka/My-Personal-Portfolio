@@ -40,6 +40,12 @@ class Sidebar extends Component {
               <span>
                 <i className="fas fa-dot-circle"></i>Node JS (Express.js, Hapi.js)
               </span>
+              <span>
+                <i className="fas fa-dot-circle"></i>Mongo DB, Postgre, MySQL
+              </span>
+              <span>
+                <i className="fas fa-dot-circle"></i>APIs (REST, GraphQL)
+              </span>
             </div>
             <span className="l-span">
               Developed by
