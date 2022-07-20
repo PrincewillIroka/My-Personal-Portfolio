@@ -38,10 +38,7 @@ class Sidebar extends Component {
                 <i className="fas fa-dot-circle"></i>React, React Native
               </span>
               <span>
-                <i className="fas fa-dot-circle"></i>Vue JS
-              </span>
-              <span>
-                <i className="fas fa-dot-circle"></i>Node JS
+                <i className="fas fa-dot-circle"></i>Node JS (Express.js, Hapi.js)
               </span>
             </div>
             <span className="l-span">
