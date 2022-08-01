@@ -28,7 +28,7 @@ class About extends Component {
             <span>Hello, I'm</span>
             <span>Princewill Iroka</span>
             <span>
-              I am a productive Software Developer who is passionate about
+              I am a productive Fullstack Software Developer who is passionate about
               developing scalable, maintainable, cutting-edge web and mobile
               apps. Using flexible modern Software Architecture principles, I
               can work in a team or with minimal supervision to deliver high

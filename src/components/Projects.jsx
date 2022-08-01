@@ -1,173 +1,136 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import eLaundryApp from '../assets/images/projectImages/Screenshot_20190910-221244.png'
-import worldUniversities from '../assets/images/projectImages/world-universities.png'
-import eLaundryWebsite from '../assets/images/projectImages/e-laundry_website.png'
-import medicalEquipmentWebsite from '../assets/images/projectImages/medical_equipment_system.png'
-import worldNewsApp from '../assets/images/projectImages/world_news_app.png'
+import React, { useState } from "react";
+import styled from "styled-components";
+import WorldUniversities from "../assets/images/projectImages/world-universities.png";
+import WorldNewsApp from "../assets/images/projectImages/world_news_app.png";
 
-export default class Projects extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <div className="projects-container">
-          <div className='parent-container'>
-            <div className='m-container'>
-              <div className='item-container'>
-                <div
-                  className="anImg"
-                  style={{
-                    backgroundImage: 'url(' + worldNewsApp + ')'
-                  }}
-                ></div>
-                <div className="text-container">
-                  <span>
-                    <a target="_blank" rel="noopener noreferrer" href="https://worldnewsapp.netlify.com/">
-                      World News App
-                  </a>
-                  </span>
-                  <span>News from top sites around the world.</span>
-                  <div>
-                    <span>Technologies used:</span>
-                    <span>React, News API</span>
-                  </div>
-                  <span>
-                    <a target="_blank" rel="noopener noreferrer" href="https://worldnewsapp.netlify.com/">
-                      View web app
-                  </a>
-                  </span>
-                </div>
-              </div>
-              <div className='item-container'>
-                <div
-                  className="anImg"
-                  style={{
-                    backgroundImage: 'url(' + worldUniversities + ')'
-                  }}
-                ></div>
-                <div className="text-container">
-                  <span>
-                    <a
-                      target="_blank" rel="noopener noreferrer"
-                      href="https://play.google.com/store/apps/details?id=com.princewilliroka.worlduniversitiesapp"
-                    >
-                      World Universities (Mobile App)
-                  </a>
-                  </span>
-                  <span>Thousands of top Universities around the World.</span>
-                  <div>
-                    <span>Technologies used:</span>
-                    <span>React Native, Hooks</span>
-                  </div>
-                  <span>
-                    <a
-                      target="_blank" rel="noopener noreferrer"
-                      href="https://play.google.com/store/apps/details?id=com.princewilliroka.worlduniversitiesapp"
-                    >
-                      View app on Google Play Store
-                  </a>
-                  </span>
-                </div>
-              </div>
-              <div className='item-container'>
-                <div
-                  className="anImg"
-                  style={{
-                    backgroundImage: 'url(' + eLaundryApp + ')'
-                  }}
-                ></div>
-                <div className="text-container">
-                  <span>
-                    <a
-                      target="_blank" rel="noopener noreferrer"
-                      href="https://play.google.com/store/apps/details?id=com.princewill.e_laundry"
-                    >
-                      e-Laundry (Mobile App)
-                  </a>
-                  </span>
-                  <span>An online laundry services android app.</span>
-                  <div>
-                    <span>Technologies used:</span>
-                    <span>Android(Java)</span>
-                  </div>
-                  <span>
-                    <a
-                      target="_blank" rel="noopener noreferrer"
-                      href="https://play.google.com/store/apps/details?id=com.princewill.e_laundry"
-                    >
-                      View app on Google Play Store
-                  </a>
-                  </span>
-                </div>
-              </div>
-              <div className='item-container'>
-                <div
-                  className="anImg"
-                  style={{
-                    backgroundImage: 'url(' + medicalEquipmentWebsite + ')'
-                  }}
-                ></div>
-                <div className="text-container">
-                  <span>
-                    <a
-                      target="_blank" rel="noopener noreferrer"
-                      href="http://medical-equipment--system.herokuapp.com/"
-                    >
-                      Medical Equipment Management System
-                  </a>
-                  </span>
-                  <span>A web app for medical laboratories.</span>
-                  <div>
-                    <span>Technologies used:</span>
-                    <span>Vue JS, Laravel</span>
-                  </div>
-                  <span>
-                    <a
-                      target="_blank" rel="noopener noreferrer"
-                      href="http://medical-equipment--system.herokuapp.com/"
-                    >
-                      View web app
-                  </a>
-                  </span>
-                </div>
-              </div>
-              <div className='item-container'>
-                <div
-                  className="anImg"
-                  style={{
-                    backgroundImage: 'url(' + eLaundryWebsite + ')'
-                  }}
-                ></div>
-                <div className="text-container">
-                  <span>
-                    <a target="_blank" rel="noopener noreferrer" href="https://e-laundry.com.ng">
-                      e-Laundry (Web App)
-                  </a>
-                  </span>
-                  <span>An online laundry services web app.</span>
-                  <div>
-                    <span>Technologies used:</span>
-                    <span>Laravel</span>
-                  </div>
-                  <span>
-                    <a target="_blank" rel="noopener noreferrer" href="https://e-laundry.com.ng">
-                      View web app
-                  </a>
-                  </span>
-                </div>
-              </div>
+const TABS = [
+  {
+    title: "World News App",
+    description: "",
+    images: [WorldUniversities],
+  },
+  {
+    title: "World Universities",
+    description: "",
+    images: [],
+  },
+  {
+    title: "Free Courses",
+    description: "",
+    images: [],
+  },
+  {
+    title: "G-mail clone",
+    description: "",
+    images: [],
+  },
+  {
+    title: "Project Management app",
+    description: "",
+    images: [],
+  },
+];
+
+const Projects = () => {
+  const [activeTab, setActiveTab] = useState({
+    title: "World News App",
+    description: "",
+    images: [WorldUniversities],
+  });
+
+  const handleTabChange = (value) => {
+    const foundTab = TABS.find((tab) => tab.title === value);
+    setActiveTab(foundTab);
+  };
+
+  const isActiveTab = (value) => {
+    return activeTab.title === value;
+  };
+
+  return (
+    <Wrapper>
+      <div className="projects-container">
+        <div className="tabbed-layout">
+          <div className="title-tab">
+            {TABS.map((tab) => (
+              <span
+                onClick={() => handleTabChange(tab.title)}
+                className={`single-title ${
+                  isActiveTab(tab.title) && "active-title"
+                }`}
+              >
+                {tab.title}
+              </span>
+            ))}
+          </div>
+          <div className="details-tab">
+            <div className="details-images-container">
+              {activeTab.images.length
+                ? activeTab.images.map((image) => <img src={image} />)
+                : null}
+            </div>
+            <div className="details-description">
+              
             </div>
           </div>
         </div>
-      </Wrapper>
-    )
-  }
-}
+      </div>
+    </Wrapper>
+  );
+};
+
+export default Projects;
 
 const Wrapper = styled.div`
+
   .projects-container {
-    display: flex;
-    align-items: center;    
+    display: flex;   
+    width: 100%;
+    height: 100vh;
+    overflow-y:none;    
+    
+    .tabbed-layout{
+      display: flex;
+
+      .title-tab{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #f3f3f3;
+
+        .single-title{
+          height: 50px;
+          width:100%;
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+          border-bottom: 1px solid #f3f3f3;
+          font-size: 1.0rem;
+          opacity: 0.9;
+          cursor:pointer;
+          font-family: Arial;
+        }
+
+        .active-title{
+          background: #f33b86;
+          color: #fff;
+          opacity: 1.0;
+        }
+      }
+
+      .details-tab{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .details-images-container{
+
+        }
+      }
+    }
 
     .parent-container{
       height: 100vh;
@@ -242,9 +205,10 @@ const Wrapper = styled.div`
         }
       }
 
-    }    
+    }
 
   }
+
   @media (max-width: 600px) {
     .parent-container{
       padding: 0 15px 0 25px !important;
@@ -254,4 +218,4 @@ const Wrapper = styled.div`
       grid-template-columns: repeat(1, 100% [col-start]) !important;      
     }
   }
-`
+`;
