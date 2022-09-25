@@ -79,7 +79,6 @@ export default connect(
 )(Header)
 const Wrapper = styled.div` 
 .headerContainer {
-  padding-top: 30px;
 
   .headerUl {
     display: flex;
@@ -99,16 +98,16 @@ const Wrapper = styled.div`
     }
 
     .headerLi {
-      margin-right: 60px;
       font-weight: bold;
-      padding-bottom: 30px;
-      cursor: default;
+      margin: 20px 60px 20px 0;
+      padding-bottom: 10px;
+      cursor: pointer;
       font-family: font-family: 'Chilanka', cursive;
     }
 
     .activeLi {
       color: #f44e91;
-      border-bottom: 2px solid #f44e91;
+      border-bottom: 4px solid #f44e91;
     }
   }
 }
