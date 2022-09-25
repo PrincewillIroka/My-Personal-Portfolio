@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import photo from "../assets/images/princewill_iroka.png";
+import photo from "../assets/images/portfolio_pic_new.jpg";
 import styled from "styled-components";
 import { connect } from "react-redux";
 import { toggleMobileView } from "../store/actions";
@@ -38,7 +38,8 @@ class Sidebar extends Component {
                 <i className="fas fa-dot-circle"></i>React, React Native
               </span>
               <span>
-                <i className="fas fa-dot-circle"></i>Node JS (Express.js, Hapi.js)
+                <i className="fas fa-dot-circle"></i>Node JS (Express.js,
+                Hapi.js)
               </span>
               <span>
                 <i className="fas fa-dot-circle"></i>Mongo DB, Postgre, MySQL
