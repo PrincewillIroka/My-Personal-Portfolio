@@ -10,12 +10,12 @@ const TABS = [
     title: "World News App",
     description: "News from top sites around the world",
     technologies: "React, News API",
-    images: [WorldNewsApp, WorldNewsApp],
+    images: [WorldNewsApp, WorldUniversities],
   },
   {
     title: "World Universities",
     description: "",
-    images: [WorldUniversities, WorldUniversities],
+    images: [WorldUniversities, WorldNewsApp],
   },
   {
     title: "Free Courses",
@@ -39,7 +39,7 @@ const Projects = () => {
     title: "World News App",
     description: "News from top sites around the world",
     technologies: "React, News API",
-    images: [WorldNewsApp, WorldNewsApp],
+    images: [WorldNewsApp, WorldUniversities],
   });
 
   const handleTabChange = (value) => {
@@ -57,7 +57,10 @@ const Projects = () => {
         <div className="title-tab">
           {TABS.map((tab, index) => (
             <span
-              onClick={() => handleTabChange(tab.title)}
+              onClick={(e) => {
+                e.preventDefault();
+                handleTabChange(tab.title);
+              }}
               className={`single-title ${
                 isActiveTab(tab.title) && "active-title"
               }`}
@@ -73,7 +76,11 @@ const Projects = () => {
               {activeTab?.images?.length
                 ? activeTab.images.map((image, index) => (
                     <CarouselItem key={index}>
-                      <img className="details-image" src={image} alt="Details"/>
+                      <img
+                        className="details-image"
+                        src={image}
+                        alt="Details"
+                      />
                     </CarouselItem>
                   ))
                 : null}

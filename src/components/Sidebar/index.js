@@ -7,14 +7,6 @@ import { toggleMobileView } from "../../store/actions";
 const Sidebar = () => {
   const dispatch = useDispatch();
 
-  const portfolioPictureStyle = () => {
-    return {
-      height: "30%",
-      width: "65%",
-      borderRadius: "50%",
-    };
-  };
-
   const closeSidebar = () => {
     dispatch(toggleMobileView());
   };
@@ -23,15 +15,10 @@ const Sidebar = () => {
     <Wrapper>
       <div className="portfolioContainer">
         <div className="top-container">
-          <i className="fas fa-times" onClick={closeSidebar()}></i>
+          <i className="fas fa-times" onClick={() => closeSidebar()}></i>
         </div>
         <div className="n-container">
-          <img
-            src={photo}
-            alt="Portfolio"
-            className="portfolioPicture"
-            style={portfolioPictureStyle()}
-          />
+          <img src={photo} alt="Portfolio" className="portfolioPicture" />
           <span className="f-span">Princewill Iroka</span>
           <span className="s-span">Senior Software Engineer</span>
           <div className="p-div">
@@ -74,157 +61,161 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
 
-    .top-container{
-      display:none;
-      justify-content:flex-end;
+    .top-container {
+      display: none;
+      justify-content: flex-end;
       padding: 10px;
     }
 
-    .fa-times{
+    .fa-times {
       font-size: 30px;
     }
 
-    .n-container{
+    .n-container {
       display: flex;
       height: 100%;
       width: 100%;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       > .f-span {
-      margin-top: 20px;
-      font-family: 'Pacifico', cursive;
-      font-size: 1.4375rem;
-      color: #1c699b;
-    }
-
-    > .s-span {
-      margin-top: 20px;
-      font-size: 17px;
-      color: #1c699b;
-    }
-
-    > .p-div {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      width: 80%;
-      font-size: 14px;
-      color: #1c699b;
-
-      > span {
-        margin-bottom: 10px;
+        margin-top: 20px;
+        font-family: "Pacifico", cursive;
+        font-size: 1.4375rem;
+        color: #1c699b;
       }
 
-      .fas {
-        margin-right: 5px;
+      > .s-span {
+        margin-top: 20px;
+        font-size: 17px;
+        color: #1c699b;
+      }
+
+      > .p-div {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        font-size: 14px;
+        color: #1c699b;
+
+        > span {
+          margin-bottom: 10px;
+        }
+
+        .fas {
+          margin-right: 5px;
+        }
+      }
+
+      > .l-span {
+        position: fixed;
+        bottom: 10px;
+        font-size: 14px;
+        font-family: "Fira Sans Extra Condensed", sans-serif;
+
+        > a {
+          color: #f44e91;
+        }
       }
     }
 
-    > .l-span {
-      position: fixed;
-      bottom: 10px;
-      font-size: 14px;
-      font-family: 'Fira Sans Extra Condensed', sans-serif;
-
-      > a {
-        color: #f44e91;
-      }
+    .portfolioPicture {
+      border-radius: 50%;
     }
-
   }
 
   @media (min-width: 1326px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 32% !important;
       width: 65% !important;
     }
   }
 
   @media (max-width: 1326px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 35% !important;
       width: 55% !important;
     }
   }
 
   @media (max-width: 1160px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 30% !important;
       width: 60% !important;
     }
   }
 
   @media (max-width: 992px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 30% !important;
       width: 65% !important;
     }
-    .p-div{
+    .p-div {
       font-size: 12px !important;
     }
-    .l-span{
-      font-size:0.625rem !important;
+    .l-span {
+      font-size: 0.625rem !important;
     }
   }
 
   @media (max-width: 880px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 30% !important;
       width: 75% !important;
     }
   }
 
   @media (max-width: 785px) {
-    .top-container{
-      display:flex !important;
+    .top-container {
+      display: flex !important;
     }
-    .portfolioPicture{
+    .portfolioPicture {
       height: 40% !important;
       width: 25% !important;
     }
   }
 
   @media (max-width: 670px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 40% !important;
       width: 28% !important;
     }
   }
 
   @media (max-width: 560px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 40% !important;
       width: 35% !important;
     }
   }
 
   @media (max-width: 490px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 40% !important;
       width: 38% !important;
     }
   }
 
   @media (max-width: 460px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 40% !important;
       width: 42% !important;
     }
   }
 
   @media (max-width: 400px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 35% !important;
       width: 55% !important;
     }
   }
 
   @media (max-width: 398px) {
-    .portfolioPicture{
+    .portfolioPicture {
       height: 30% !important;
       width: 48% !important;
     }
   }
-
 `;
