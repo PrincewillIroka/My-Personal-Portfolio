@@ -49,7 +49,9 @@
 }
 
 .details-image {
-  height: 100%;
+  height: 90%;
+  width: 600px;
+  object-fit: contain;
 }
 
 .details-info {
@@ -62,6 +64,7 @@
   justify-content: center;
   font-size: 16px;
   margin-bottom: 7px;
+  height: 14px;
 }
 
 .details-technologies {

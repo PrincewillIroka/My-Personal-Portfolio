@@ -1,11 +1,13 @@
-import React, { Component } from "react";
-import photo from "../assets/images/princewill_iroka.png";
+import React from "react";
 import styled from "styled-components";
-import { connect } from "react-redux";
-import { toggleMobileView } from "../store/actions";
+import { useDispatch } from "react-redux";
+import photo from "../../assets/images/princewill_iroka.png";
+import { toggleMobileView } from "../../store/actions";
 
-class Sidebar extends Component {
-  portfolioPictureStyle = () => {
+const Sidebar = () => {
+  const dispatch = useDispatch();
+
+  const portfolioPictureStyle = () => {
     return {
       height: "30%",
       width: "65%",
@@ -13,67 +15,57 @@ class Sidebar extends Component {
     };
   };
 
-  closeSidebar = () => {
-    this.props.closeSidebar();
+  const closeSidebar = () => {
+    dispatch(toggleMobileView());
   };
 
-  render() {
-    return (
-      <Wrapper>
-        <div className="portfolioContainer">
-          <div className="top-container">
-            <i className="fas fa-times" onClick={this.closeSidebar}></i>
-          </div>
-          <div className="n-container">
-            <img
-              src={photo}
-              alt="Portfolio"
-              className="portfolioPicture"
-              style={this.portfolioPictureStyle()}
-            />
-            <span className="f-span">Princewill Iroka</span>
-            <span className="s-span">Senior Software Engineer</span>
-            <div className="p-div">
-              <span>
-                <i className="fas fa-dot-circle"></i>React, React Native
-              </span>
-              <span>
-                <i className="fas fa-dot-circle"></i>Node JS (Express.js, Hapi.js)
-              </span>
-              <span>
-                <i className="fas fa-dot-circle"></i>Mongo DB, Postgre, MySQL
-              </span>
-              <span>
-                <i className="fas fa-dot-circle"></i>APIs (REST, GraphQL)
-              </span>
-            </div>
-            <span className="l-span">
-              Developed by
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://twitter.com/princewilliroka/"
-              >
-                <span> Princewill Iroka </span>
-              </a>
-              with React JS
+  return (
+    <Wrapper>
+      <div className="portfolioContainer">
+        <div className="top-container">
+          <i className="fas fa-times" onClick={closeSidebar()}></i>
+        </div>
+        <div className="n-container">
+          <img
+            src={photo}
+            alt="Portfolio"
+            className="portfolioPicture"
+            style={portfolioPictureStyle()}
+          />
+          <span className="f-span">Princewill Iroka</span>
+          <span className="s-span">Senior Software Engineer</span>
+          <div className="p-div">
+            <span>
+              <i className="fas fa-dot-circle"></i>React, React Native
+            </span>
+            <span>
+              <i className="fas fa-dot-circle"></i>Node JS (Express.js, Hapi.js)
+            </span>
+            <span>
+              <i className="fas fa-dot-circle"></i>Mongo DB, Postgre, MySQL
+            </span>
+            <span>
+              <i className="fas fa-dot-circle"></i>APIs (REST, GraphQL)
             </span>
           </div>
+          <span className="l-span">
+            Developed by
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/princewilliroka/"
+            >
+              <span> Princewill Iroka </span>
+            </a>
+            with React JS
+          </span>
         </div>
-      </Wrapper>
-    );
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    closeSidebar: () => {
-      dispatch(toggleMobileView());
-    },
-  };
+      </div>
+    </Wrapper>
+  );
 };
 
-export default connect(null, mapDispatchToProps)(Sidebar);
+export default Sidebar;
 
 const Wrapper = styled.div`
   .portfolioContainer {

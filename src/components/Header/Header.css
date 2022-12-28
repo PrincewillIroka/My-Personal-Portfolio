@@ -11,9 +11,8 @@
 .headerLi {
   margin-right: 60px;
   font-weight: bold;
-  cursor: default;
-  font-family: "Chilanka", cursive;
   cursor: pointer;
+  padding-bottom: 5px;
 }
 
 .hamburger-btn {
@@ -28,7 +27,7 @@
 
 .activeLi {
   color: #f44e91;
-  border-bottom: 2px solid #f44e91;
+  border-bottom: 3px solid #f44e91;
 }
 
 @media (max-width: 785px) {

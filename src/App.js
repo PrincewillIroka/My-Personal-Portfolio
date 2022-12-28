@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-import store from './store'
-import Container from './components/Container'
-import './App.css'
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./store";
+import Container from "./components/Container";
+import "./App.css";
 
-export default class App extends Component {
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Container />
+    </Provider>
+  );
+};
 
-  render() {
-    return (
-      <Provider store={store}>
-        <Container />
-      </Provider>
-    )
-  }
-}
-
+export default App;

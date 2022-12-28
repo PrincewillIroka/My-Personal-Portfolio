@@ -1,77 +1,54 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { toggleActiveTab, toggleMobileView } from "../../store/actions";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleActiveTab } from "../../store/actions";
 import "./Header.css";
 
-class Header extends Component {
-  headerItemClicked = (e, tab) => {
-    this.props.toggleActiveTab(tab);
+const Header = () => {
+  const { activeTab } = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  const headerItemClicked = (e, tab) => {
+    dispatch(toggleActiveTab(tab));
   };
 
-  openSidebar = () => {
-    this.props.openSidebar();
+  const openSidebar = () => {
+    dispatch(openSidebar());
   };
 
-  render() {
-    return (
-      <div className="headerContainer">
-        <ul className="headerUl">
-          <li className="hamburger-btn">
-            <i className="fas fa-bars" onClick={this.openSidebar}></i>
-          </li>
-          <li
-            onClick={(e) => this.headerItemClicked(e, "About")}
-            className={`headerLi ${
-              this.props.activeTab === "About" && "activeLi"
-            }`}
-          >
-            About
-          </li>
-          <li
-            onClick={(e) => this.headerItemClicked(e, "Projects")}
-            className={`headerLi ${
-              this.props.activeTab === "Projects" && "activeLi"
-            }`}
-          >
-            Projects
-          </li>
-          <li
-            onClick={(e) => this.headerItemClicked(e, "Contact")}
-            className={`headerLi ${
-              this.props.activeTab === "Contact" && "activeLi"
-            }`}
-          >
-            Contact
-          </li>
-          {/* <li
-              onClick={e => this.headerItemClicked(e, 'Articles')}
-              className={`headerLi ${this.props.activeTab === 'Articles' &&
+  return (
+    <div className="headerContainer">
+      <ul className="headerUl">
+        <li className="hamburger-btn">
+          <i className="fas fa-bars" onClick={openSidebar}></i>
+        </li>
+        <li
+          onClick={(e) => headerItemClicked(e, "About")}
+          className={`headerLi ${activeTab === "About" && "activeLi"}`}
+        >
+          About
+        </li>
+        <li
+          onClick={(e) => headerItemClicked(e, "Projects")}
+          className={`headerLi ${activeTab === "Projects" && "activeLi"}`}
+        >
+          Projects
+        </li>
+        <li
+          onClick={(e) => headerItemClicked(e, "Contact")}
+          className={`headerLi ${activeTab === "Contact" && "activeLi"}`}
+        >
+          Contact
+        </li>
+        {/* <li
+              onClick={e => headerItemClicked(e, 'Articles')}
+              className={`headerLi ${activeTab === 'Articles' &&
                 'activeLi'}`}
             >
               Articles
             </li> */}
-        </ul>
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = (state) => {
-  return {
-    activeTab: state.activeTab,
-    isMobileView: state.isMobileView,
-  };
+      </ul>
+    </div>
+  );
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    toggleActiveTab: (tab) => {
-      dispatch(toggleActiveTab(tab));
-    },
-    openSidebar: () => {
-      dispatch(toggleMobileView());
-    },
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;

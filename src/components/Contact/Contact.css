@@ -1,0 +1,166 @@
+.about-container {
+  display: flex;
+  padding: 5% 15% 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.hello-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hello-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.hello-text-1 {
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.hello-text-2,
+.hello-text-3 {
+  font-size: 17px;
+}
+
+.mail-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.span-or {
+  padding-left: 100px;
+  margin-top: 50px;
+}
+
+.span-mail-title {
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.span-mail-info {
+  color: #1c699b;
+}
+
+.form-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+}
+
+.contact-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-wrapper {
+  background-color: #ebeef1;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.fas,
+.far {
+  align-self: center;
+  color: #9998a9;
+  margin: 0 15px;
+}
+
+input {
+  border: none;
+  background-color: #ebeef1;
+  width: 100%;
+  outline: none;
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.field-info {
+  font-size: 13px;
+  color: #f33b86;
+}
+
+.message-field-wrapper {
+  background-color: #ebeef1;
+  height: 150px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+textarea {
+  height: 100%;
+  width: 100%;
+  background-color: #ebeef1;
+  resize: none;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 10px;
+  outline: none;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+button {
+  background-color: #f33b86;
+  border-radius: 50px;
+  padding: 15px 0;
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+button:hover {
+  background-color: #fff;
+  border: 1px solid #f33b86;
+  color: #f33b86;
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    padding: 5% 5% 40%;
+  }
+
+  .hello-container {
+    width: 100% !important;
+    flex-direction: row !important;
+  }
+
+  .form-container {
+    width: 100% !important;
+    margin-top: 60px;
+  }
+
+  .hello-wrapper {
+    width: 45%;
+  }
+
+  .mail-wrapper {
+    width: 58%;
+  }
+
+  .span-mail-title {
+    margin-top: auto !important;
+  }
+
+  .span-or {
+    display: none;
+  }
+}

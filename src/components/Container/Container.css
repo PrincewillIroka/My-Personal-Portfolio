@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 23%;
+  min-width: 23%;
+  background-color: #f3f3f3;
+}
+
+@media (max-width: 785px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+  }
+
+  .hidden-sidebar {
+    display: none;
+  }
+}
