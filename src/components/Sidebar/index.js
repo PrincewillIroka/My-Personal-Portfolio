@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import photo from "../../assets/images/princewill_iroka.png";
+import photo from "../../assets/images/portfolio_pic_new.jpg";
 import { toggleMobileView } from "../../store/actions";
 
 const Sidebar = () => {
