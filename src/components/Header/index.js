@@ -16,32 +16,36 @@ const Header = () => {
   };
 
   return (
-    <div className="headerContainer">
-      <ul className="headerUl">
+    <div className="header-container">
+      <ul className="header-ul">
         <li className="hamburger-btn">
-          <i className="fas fa-bars" onClick={openSidebar}></i>
+          <i className="fas fa-bars" onClick={() => openSidebar()}></i>
         </li>
         <li
           onClick={(e) => headerItemClicked(e, "About")}
-          className={`headerLi ${activeTab === "About" && "activeLi"}`}
+          className={`header-list-item ${activeTab === "About" && "activeLi"}`}
         >
           About
         </li>
         <li
           onClick={(e) => headerItemClicked(e, "Projects")}
-          className={`headerLi ${activeTab === "Projects" && "activeLi"}`}
+          className={`header-list-item ${
+            activeTab === "Projects" && "activeLi"
+          }`}
         >
           Projects
         </li>
         <li
           onClick={(e) => headerItemClicked(e, "Contact")}
-          className={`headerLi ${activeTab === "Contact" && "activeLi"}`}
+          className={`header-list-item ${
+            activeTab === "Contact" && "activeLi"
+          }`}
         >
           Contact
         </li>
         {/* <li
               onClick={e => headerItemClicked(e, 'Articles')}
-              className={`headerLi ${activeTab === 'Articles' &&
+              className={`header-list-item ${activeTab === 'Articles' &&
                 'activeLi'}`}
             >
               Articles

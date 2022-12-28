@@ -7,13 +7,13 @@ const initialState = {
 
 const tabsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case Actions.CHANGEACTIVETAB: {
+    case Actions.CHANGE_ACTIVE_TAB: {
       return {
         ...state,
         activeTab: action.payload
       }
     }
-    case Actions.CHANGEMOBILEVIEW: {
+    case Actions.CHANGE_MOBILE_VIEW: {
       return {
         ...state,
         isMobileView: !state.isMobileView

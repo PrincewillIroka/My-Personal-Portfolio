@@ -1,4 +1,8 @@
-.headerUl {
+.header-container {
+  height: 60px;
+}
+
+.header-ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +12,7 @@
   height: 60px;
 }
 
-.headerLi {
+.header-list-item {
   margin-right: 60px;
   font-weight: bold;
   cursor: pointer;
