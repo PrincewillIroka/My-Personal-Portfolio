@@ -47,8 +47,8 @@ const Carousel = ({ children }) => {
     <div
       {...handlers}
       className="carousel"
-      // onMouseEnter={() => setPaused(true)}
-      // onMouseLeave={() => setPaused(false)}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
       <div
         className="inner"
@@ -63,6 +63,7 @@ const Carousel = ({ children }) => {
           onClick={() => {
             updateIndex(activeIndex - 1);
           }}
+          className="btn-previous"
         >
           Prev
         </button>
@@ -82,6 +83,7 @@ const Carousel = ({ children }) => {
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
+          className="btn-next"
         >
           Next
         </button>

@@ -39,7 +39,9 @@
 .details {
   width: 80%;
   height: 100%;
-  padding: 15px 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .details-images-container {
@@ -50,7 +52,7 @@
 
 .details-image {
   height: 90%;
-  width: 600px;
+  /* width: 600px; */
   object-fit: contain;
 }
 

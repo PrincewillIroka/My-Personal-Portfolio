@@ -6,6 +6,7 @@
 .inner {
   white-space: nowrap;
   transition: transform 0.3s;
+  height: 90%;
 }
 
 .carousel-item {
@@ -28,4 +29,12 @@
 .indicators > button.active {
   background-color: green;
   color: #fff;
+}
+
+.btn-previous{
+  width: 80px;
+}
+
+.btn-next{
+  width: 80px;
 }
