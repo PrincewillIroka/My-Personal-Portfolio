@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleActiveTab } from "../../store/actions";
+import { toggleActiveTab, toggleMobileView } from "../../store/actions";
 import "./Header.css";
 
 const Header = () => {
@@ -12,44 +12,51 @@ const Header = () => {
   };
 
   const openSidebar = () => {
-    dispatch(openSidebar());
+    dispatch(toggleMobileView());
   };
 
   return (
     <div className="header-container">
       <ul className="header-ul">
         <li className="hamburger-btn">
-          <i className="fas fa-bars" onClick={() => openSidebar()}></i>
+          <i
+            className="fas fa-bars hamburger-icon"
+            onClick={() => openSidebar()}
+          ></i>
         </li>
-        <li
-          onClick={(e) => headerItemClicked(e, "About")}
-          className={`header-list-item ${activeTab === "About" && "activeLi"}`}
-        >
-          About
-        </li>
-        <li
+        <ul className="nav-links">
+          <li
+            onClick={(e) => headerItemClicked(e, "About")}
+            className={`header-list-item ${
+              activeTab === "About" && "active-li"
+            }`}
+          >
+            About
+          </li>
+          {/* <li
           onClick={(e) => headerItemClicked(e, "Projects")}
           className={`header-list-item ${
-            activeTab === "Projects" && "activeLi"
+            activeTab === "Projects" && "active-li"
           }`}
         >
           Projects
-        </li>
-        <li
-          onClick={(e) => headerItemClicked(e, "Contact")}
-          className={`header-list-item ${
-            activeTab === "Contact" && "activeLi"
-          }`}
-        >
-          Contact
-        </li>
-        {/* <li
+        </li> */}
+          <li
+            onClick={(e) => headerItemClicked(e, "Contact")}
+            className={`header-list-item ${
+              activeTab === "Contact" && "active-li"
+            }`}
+          >
+            Contact
+          </li>
+          {/* <li
               onClick={e => headerItemClicked(e, 'Articles')}
               className={`header-list-item ${activeTab === 'Articles' &&
-                'activeLi'}`}
+                'active-li'}`}
             >
               Articles
             </li> */}
+        </ul>
       </ul>
     </div>
   );

@@ -2,13 +2,15 @@
   height: 60px;
 }
 
+ul li {
+  user-select: none;
+  list-style-type: none;
+}
+
 .header-ul {
   display: flex;
   align-items: center;
-  justify-content: center;
   border-bottom: 2px solid #f0f0f0;
-  user-select: none;
-  list-style-type: none;
   height: 60px;
 }
 
@@ -20,16 +22,23 @@
 }
 
 .hamburger-btn {
-  margin-right: 60px;
-  align-self: flex-start;
   display: none;
+  margin-left: 20px;
 }
 
-.fa-bars {
+.hamburger-icon {
+  color: #000 !important;
   font-size: 25px;
 }
 
-.activeLi {
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-li {
   color: #f44e91;
   border-bottom: 3px solid #f44e91;
 }
@@ -43,4 +52,4 @@
   .headerLi {
     margin-right: 40px !important;
   }
-} ;
+}

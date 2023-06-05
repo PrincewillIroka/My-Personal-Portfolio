@@ -1,7 +1,7 @@
 import * as Actions from '../actions'
 
 const initialState = {
-  activeTab: 'Projects',
+  activeTab: 'About',
   isMobileView: false
 }
 
