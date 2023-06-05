@@ -4,9 +4,7 @@
     .parent-container {
       display: flex;
       flex-direction: column;
-      padding: 70px 22% 0;
-      height: 100vh;
-      overflow-y: auto;
+      padding: 0 20% 0;
 
       > span:nth-child(1) {
         color: #707070;

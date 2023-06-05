@@ -75,9 +75,9 @@ const Contact = () => {
         <div className="hello-wrapper">
           <span className="hello-text-1">Hello !</span>
           <span className="hello-text-2">
-            feel free to reach out to me, if you
+            feel free to reach out to me,
           </span>
-          <span className="hello-text-3">wish to talk about something.</span>
+          <span className="hello-text-3">for a project/consultation.</span>
         </div>
 
         <div className="mail-wrapper">

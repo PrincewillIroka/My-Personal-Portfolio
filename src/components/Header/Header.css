@@ -29,6 +29,7 @@ ul li {
 .hamburger-icon {
   color: #000 !important;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -43,7 +44,7 @@ ul li {
   border-bottom: 3px solid #f44e91;
 }
 
-@media (max-width: 785px) {
+@media (max-width: 1070px) {
   .hamburger-btn {
     display: block !important;
   }

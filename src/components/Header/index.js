@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   const openSidebar = () => {
-    dispatch(toggleMobileView());
+    dispatch(toggleMobileView(true));
   };
 
   return (

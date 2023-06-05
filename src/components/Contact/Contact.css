@@ -1,12 +1,13 @@
 .about-container {
   display: flex;
-  padding: 5% 15% 0;
-  height: 100vh;
-  overflow-y: auto;
+  justify-content: center;
+  height: 100%;
+  padding-top: 8%;
 }
 
 .hello-container {
-  width: 40%;
+  width: 35%;
+  height: 35%;
   display: flex;
   flex-direction: column;
 }
@@ -48,10 +49,10 @@
 }
 
 .form-container {
-  width: 60%;
+  width: 35%;
+  height: 35%;
   display: flex;
   flex-direction: column;
-  padding-left: 10%;
 }
 
 .contact-title {
@@ -133,10 +134,10 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  .about-container {
+  /* .about-container {
     flex-direction: column;
     padding: 5% 5% 40%;
-  }
+  } */
 
   .hello-container {
     width: 100% !important;
@@ -163,4 +164,10 @@ button:hover {
   .span-or {
     display: none;
   }
+}
+
+@media only screen and (max-width: 1070px) {
+  /* .about-container {
+    flex-direction: column;
+  } */
 }

@@ -16,7 +16,7 @@ const tabsReducer = (state = initialState, action) => {
     case Actions.CHANGE_MOBILE_VIEW: {
       return {
         ...state,
-        isMobileView: !state.isMobileView
+        isMobileView: action.payload
       }
     }
     default: {
