@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import { connect } from 'react-redux'
-import { toggleActiveTab, toggleMobileView } from '../store/actions'
+import React, { Component } from "react";
+import styled from "styled-components";
+import { connect } from "react-redux";
+import { toggleActiveTab, toggleMobileView } from "../store/actions";
 
 class Header extends Component {
   headerItemClicked = (e, tab) => {
-    this.props.toggleActiveTab(tab)
-  }
+    this.props.toggleActiveTab(tab);
+  };
 
   openSidebar = () => {
-    this.props.openSidebar()
-  }
+    this.props.openSidebar();
+  };
 
   render() {
     return (
@@ -20,94 +20,108 @@ class Header extends Component {
             <li className="hamburger-btn">
               <i className="fas fa-bars" onClick={this.openSidebar}></i>
             </li>
-            <li
-              onClick={e => this.headerItemClicked(e, 'About')}
-              className={`headerLi ${this.props.activeTab === 'About' &&
-                'activeLi'}`}
-            >
-              About
-            </li>
-            <li
+            <ul className="navLi">
+              <li
+                onClick={(e) => this.headerItemClicked(e, "About")}
+                className={`headerLi ${
+                  this.props.activeTab === "About" ? "activeLi" : ""
+                }`}
+              >
+                About
+              </li>
+              {/* <li
               onClick={e => this.headerItemClicked(e, 'Projects')}
               className={`headerLi ${this.props.activeTab === 'Projects' &&
                 'activeLi'}`}
             >
               Projects
-            </li>
-            <li
-              onClick={e => this.headerItemClicked(e, 'Contact')}
-              className={`headerLi ${this.props.activeTab === 'Contact' &&
-                'activeLi'}`}
-            >
-              Contact
-            </li>
-            {/* <li
+            </li> */}
+              <li
+                onClick={(e) => this.headerItemClicked(e, "Contact")}
+                className={`headerLi ${
+                  this.props.activeTab === "Contact" ? "activeLi" : ""
+                }`}
+              >
+                Contact
+              </li>
+              {/* <li
               onClick={e => this.headerItemClicked(e, 'Articles')}
               className={`headerLi ${this.props.activeTab === 'Articles' &&
                 'activeLi'}`}
             >
               Articles
             </li> */}
+            </ul>
           </ul>
         </div>
       </Wrapper>
-    )
+    );
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     activeTab: state.activeTab,
-    isMobileView: state.isMobileView
-  }
-}
+    isMobileView: state.isMobileView,
+  };
+};
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    toggleActiveTab: tab => {
-      dispatch(toggleActiveTab(tab))
+    toggleActiveTab: (tab) => {
+      dispatch(toggleActiveTab(tab));
     },
     openSidebar: () => {
-      dispatch(toggleMobileView())
-    }
-  }
-}
+      dispatch(toggleMobileView());
+    },
+  };
+};
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
 const Wrapper = styled.div` 
 .headerContainer {
 
   .headerUl {
     display: flex;
     align-items: center;
-    justify-content: center;
     border-bottom: 2px solid #f0f0f0;
     user-select: none;
     list-style-type:none;
 
     .hamburger-btn{
-      margin-right: 60px;
-      align-self:flex-start;
+      margin-left: 30px;
       display: none;
+
       .fa-bars{
         font-size: 25px;
       }
     }
 
-    .headerLi {
-      font-weight: bold;
-      margin: 20px 60px 20px 0;
-      padding-bottom: 10px;
-      cursor: pointer;
-      font-family: font-family: 'Chilanka', cursive;
+    @media (max-width: 785px) {
+      .hamburger-btn{
+        margin-left: 60px;
+      }
     }
 
-    .activeLi {
-      color: #f44e91;
-      border-bottom: 4px solid #f44e91;
+    .navLi{
+      user-select: none;
+      list-style-type:none;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+
+      .headerLi {
+        font-weight: bold;
+        margin: 20px 60px 20px 0;
+        padding-bottom: 10px;
+        cursor: pointer;
+        font-family: font-family: 'Chilanka', cursive;
+      }
+
+      .activeLi {
+        color: #f44e91;
+        border-bottom: 4px solid #f44e91;
+      }
     }
   }
 }
@@ -118,8 +132,7 @@ const Wrapper = styled.div`
   }
 
   .hamburger-btn, .headerLi{
-      margin-right: 40px !important;
+    margin-right: 40px !important;
   }
-  
 }
-`
+`;
