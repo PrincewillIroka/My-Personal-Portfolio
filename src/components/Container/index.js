@@ -17,7 +17,7 @@ const Container = () => {
     if (pageWidth > 1070 && isMobileView) {
       dispatch(toggleMobileView(false));
     }
-  }, [pageWidth]);
+  }, [pageWidth, isMobileView, dispatch]);
 
   return (
     <div className="container">
