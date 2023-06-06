@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  width: 23%;
+  min-width: 23%;
+}
+
+.fixed-sidebar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
+}
+
+.hidden-sidebar {
+  display: none;
+}
+
+@media (max-width: 785px) {
+  .sidebar {
+  }
+}
+
+@media (max-width: 1070px) {
+}

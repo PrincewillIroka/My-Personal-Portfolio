@@ -39,19 +39,21 @@
 .details {
   width: 80%;
   height: 100%;
-  padding: 15px 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .details-images-container {
   height: 70%;
   display: flex;
   justify-content: center;
-  background-color: red;
 }
 
 .details-image {
-  height: 100%;
-  max-width: 800px;
+  height: 90%;
+  /* width: 600px; */
+  object-fit: contain;
 }
 
 .details-info {
@@ -64,6 +66,7 @@
   justify-content: center;
   font-size: 16px;
   margin-bottom: 7px;
+  height: 14px;
 }
 
 .details-technologies {
@@ -79,6 +82,6 @@
 .details-technologies-info {
   font-weight: bold;
   font-size: 15px;
-  color: #red;
+  color: #1c699b;
   font-family: "Poppins", sans-serif;
 }

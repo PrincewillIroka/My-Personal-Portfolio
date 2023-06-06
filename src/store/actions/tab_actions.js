@@ -1,11 +1,12 @@
-export const CHANGEACTIVETAB = 'CHANGEACTIVETAB'
-export const CHANGEMOBILEVIEW = 'CHANGEMOBILEVIEW'
+export const CHANGE_ACTIVE_TAB = "CHANGE_ACTIVE_TAB";
+export const CHANGE_MOBILE_VIEW = "CHANGE_MOBILE_VIEW";
 
-export const toggleActiveTab = tab => ({
-  type: CHANGEACTIVETAB,
-  payload: tab
-})
+export const toggleActiveTab = (tab) => ({
+  type: CHANGE_ACTIVE_TAB,
+  payload: tab,
+});
 
-export const toggleMobileView = () => ({
-  type: CHANGEMOBILEVIEW
-})
+export const toggleMobileView = (value) => ({
+  type: CHANGE_MOBILE_VIEW,
+  payload: value,
+});
