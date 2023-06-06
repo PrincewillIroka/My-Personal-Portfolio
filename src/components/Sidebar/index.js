@@ -21,7 +21,7 @@ const Sidebar = () => {
         </div>
       )}
       <div className="n-container">
-        <img src={photo} alt="Portfolio" className="portfolioPicture" />
+        <img src={photo} alt="Portfolio" className="portfolio-picture" />
         <span className="f-span">Princewill Iroka</span>
         <span className="s-span">Senior Software Engineer</span>
         <div className="skills-wrapper">
@@ -45,7 +45,7 @@ const Sidebar = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://twitter.com/princewilliroka/"
+            href="https://github.com/PrincewillIroka"
           >
             <span> Princewill Iroka </span>
           </a>
