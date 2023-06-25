@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import "./Sidebar.css";
 import photo from "../../assets/images/portfolio_pic_new.jpg";
