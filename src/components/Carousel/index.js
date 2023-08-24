@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./Carousel.css";
 
-export const CarouselItem = ({ children, width }) => {
+export const CarouselItem = ({ children, style }) => {
   return (
-    <div className="carousel-item" style={{ width: width }}>
+    <div className="carousel-item" style={style}>
       {children}
     </div>
   );
@@ -14,15 +14,18 @@ const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
-  const updateIndex = (newIndex) => {
-    if (newIndex < 0) {
-      newIndex = React.Children.count(children) - 1;
-    } else if (newIndex >= React.Children.count(children)) {
-      newIndex = 0;
-    }
+  const updateIndex = useCallback(
+    (newIndex) => {
+      if (newIndex < 0) {
+        newIndex = React.Children.count(children) - 1;
+      } else if (newIndex >= React.Children.count(children)) {
+        newIndex = 0;
+      }
 
-    setActiveIndex(newIndex);
-  };
+      setActiveIndex(newIndex);
+    },
+    [children]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +39,7 @@ const Carousel = ({ children }) => {
         clearInterval(interval);
       }
     };
-  });
+  }, [paused, activeIndex, updateIndex]);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => updateIndex(activeIndex + 1),
@@ -55,7 +58,7 @@ const Carousel = ({ children }) => {
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: "100%" });
+          return React.cloneElement(child);
         })}
       </div>
       <div className="indicators">

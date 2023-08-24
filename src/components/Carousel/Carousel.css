@@ -1,20 +1,24 @@
-.carousel {
-  overflow: hidden;
+.carousel {  
+  height: 90%;
+  max-width: 100%;
   height: 100%;
 }
 
 .inner {
+  height: 90%;
+  max-width: 100%;
   white-space: nowrap;
   transition: transform 0.3s;
-  height: 90%;
 }
 
 .carousel-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   height: 100%;
-  color: #fff;
+  max-width: 100%;
+  /* display: inline-flex; */
+  /* align-items: center;
+  justify-content: center; */
+  /* color: #fff; */
+  /* border: 1px solid red; */
 }
 
 .indicators {
@@ -31,10 +35,10 @@
   color: #fff;
 }
 
-.btn-previous{
+.btn-previous {
   width: 80px;
 }
 
-.btn-next{
+.btn-next {
   width: 80px;
 }

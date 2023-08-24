@@ -10,28 +10,28 @@ const TABS = [
     title: "World News App",
     description: "News from top sites around the world",
     technologies: "React, News API",
-    images: [WorldNewsApp, WorldUniversities],
-  },
-  {
-    title: "World Universities",
-    description: "",
-    images: [WorldUniversities, WorldNewsApp],
-  },
-  {
-    title: "Free Courses",
-    description: "",
     images: [],
   },
-  {
-    title: "G-mail clone",
-    description: "",
-    images: [],
-  },
-  {
-    title: "Project Management app",
-    description: "",
-    images: [],
-  },
+  // {
+  //   title: "World Universities",
+  //   description: "",
+  //   images: [WorldUniversities, WorldNewsApp],
+  // },
+  // {
+  //   title: "Free Courses",
+  //   description: "",
+  //   images: [],
+  // },
+  // {
+  //   title: "G-mail clone",
+  //   description: "",
+  //   images: [],
+  // },
+  // {
+  //   title: "Project Management app",
+  //   description: "",
+  //   images: [],
+  // },
 ];
 
 const Projects = () => {
@@ -39,7 +39,7 @@ const Projects = () => {
     title: "World News App",
     description: "News from top sites around the world",
     technologies: "React, News API",
-    images: [WorldNewsApp, WorldUniversities],
+    images: [WorldUniversities, WorldNewsApp],
   });
 
   const handleTabChange = (value) => {
@@ -53,40 +53,35 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <div className="tabbed-layout">
-        <div className="title-tab">
-          {TABS.map((tab, index) => (
-            <span
-              onClick={(e) => {
-                e.preventDefault();
-                handleTabChange(tab.title);
-              }}
-              className={`single-title ${
-                isActiveTab(tab.title) && "active-title"
-              }`}
-              key={index}
-            >
-              {tab.title}
-            </span>
-          ))}
+      <div className="title-tab">
+        {TABS.map((tab, index) => (
+          <span
+            onClick={(e) => {
+              e.preventDefault();
+              handleTabChange(tab.title);
+            }}
+            className={`single-title ${
+              isActiveTab(tab.title) && "active-title"
+            }`}
+            key={index}
+          >
+            {tab.title}
+          </span>
+        ))}
+      </div>
+      <div className="details">
+        <div className="details-images-container">
+          <Carousel>
+            {activeTab?.images?.length
+              ? activeTab.images.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <img className="details-image" src={image} alt="Details" />
+                  </CarouselItem>
+                ))
+              : null}
+          </Carousel>
         </div>
-        <div className="details">
-          <div className="details-images-container">
-            <Carousel>
-              {activeTab?.images?.length
-                ? activeTab.images.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <img
-                        className="details-image"
-                        src={image}
-                        alt="Details"
-                      />
-                    </CarouselItem>
-                  ))
-                : null}
-            </Carousel>
-          </div>
-          <div className="details-info">
+        {/* <div className="details-info">
             <span className="details-description">{activeTab.description}</span>
             <div className="details-technologies">
               <h5 className="details-technologies-heading">
@@ -96,8 +91,7 @@ const Projects = () => {
                 {activeTab.technologies}
               </span>
             </div>
-          </div>
-        </div>
+          </div> */}
       </div>
     </div>
   );
