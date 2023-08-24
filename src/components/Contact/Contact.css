@@ -7,7 +7,6 @@
 
 .hello-container {
   width: 35%;
-  height: 35%;
   display: flex;
   flex-direction: column;
 }
@@ -50,7 +49,6 @@
 
 .form-container {
   width: 35%;
-  height: 35%;
   display: flex;
   flex-direction: column;
 }
@@ -134,28 +132,34 @@ button:hover {
   color: #f33b86;
 }
 
-@media (max-width: 600px) {
-  /* .about-container {
+@media (max-width: 992px) {
+  .about-container {
+    height: 100vh;
     flex-direction: column;
-    padding: 5% 5% 40%;
-  } */
+    overflow-y: auto;
+    padding-top: 120px;
+  }
 
   .hello-container {
-    width: 100% !important;
-    flex-direction: row !important;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 80px;
   }
 
   .form-container {
-    width: 100% !important;
-    margin-top: 60px;
+    width: 100%;
+    margin-bottom: 120px;
+    padding: 0 10%;
   }
 
   .hello-wrapper {
-    width: 45%;
+    width: 100%;
+    align-items: center;
   }
 
   .mail-wrapper {
-    width: 58%;
+    width: 100%;
+    align-items: center;
   }
 
   .span-mail-title {
@@ -165,10 +169,4 @@ button:hover {
   .span-or {
     display: none;
   }
-}
-
-@media only screen and (max-width: 1070px) {
-  /* .about-container {
-    flex-direction: column;
-  } */
 }
