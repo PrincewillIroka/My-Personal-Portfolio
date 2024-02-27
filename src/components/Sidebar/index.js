@@ -45,10 +45,10 @@ const Sidebar = () => {
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/PrincewillIroka"
+            className="link-owner"
           >
-            <span> Princewill Iroka </span>
+            <b> Princewill Iroka </b>
           </a>
-          with React JS
         </span>
       </div>
     </div>
