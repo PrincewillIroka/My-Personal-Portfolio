@@ -66,9 +66,7 @@
       .c-t-div {
         display: flex;
         margin: 60px 0 100px;
-        > span {
-          cursor: default;
-        }
+        
         .hire-span {
           background-color: #f33b86;
           border-radius: 50px;
@@ -76,6 +74,7 @@
           color: #fff;
           margin-right: 30px;
           border: 1px solid transparent;
+          cursor: pointer;
 
           &:hover {
             background-color: #fff;
