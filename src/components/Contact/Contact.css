@@ -114,7 +114,7 @@ textarea {
   font-size: 16px;
 }
 
-button {
+.btn-submit {
   background-color: #f33b86;
   border-radius: 50px;
   padding: 15px 0;
@@ -125,7 +125,7 @@ button {
   outline: none;
 }
 
-button:hover {
+.btn-submit:hover {
   background-color: #fff;
   border: 1px solid #f33b86;
   color: #f33b86;

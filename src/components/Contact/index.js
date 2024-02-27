@@ -128,7 +128,7 @@ const Contact = () => {
               name="message"
             ></textarea>
           </div>
-          <button onClick={(e) => handleSubmit(e)}>Submit</button>
+          <button onClick={(e) => handleSubmit(e)} className="btn-submit">Submit</button>
         </form>
       </div>
     </div>
