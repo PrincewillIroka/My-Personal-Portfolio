@@ -33,14 +33,14 @@ const Header = () => {
           >
             About
           </li>
-          {/* <li
-          onClick={(e) => headerItemClicked(e, "Projects")}
-          className={`header-list-item ${
-            activeTab === "Projects" && "active-li"
-          }`}
-        >
-          Projects
-        </li> */}
+          <li
+            onClick={(e) => headerItemClicked(e, "Projects")}
+            className={`header-list-item ${
+              activeTab === "Projects" && "active-li"
+            }`}
+          >
+            Projects
+          </li>
           <li
             onClick={(e) => headerItemClicked(e, "Contact")}
             className={`header-list-item ${
