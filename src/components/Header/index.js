@@ -24,39 +24,41 @@ const Header = () => {
             onClick={() => openSidebar()}
           ></i>
         </li>
-        <ul className="nav-links">
-          <li
-            onClick={(e) => headerItemClicked(e, "About")}
-            className={`header-list-item ${
-              activeTab === "About" && "active-li"
-            }`}
-          >
-            About
-          </li>
-          <li
-            onClick={(e) => headerItemClicked(e, "Projects")}
-            className={`header-list-item ${
-              activeTab === "Projects" && "active-li"
-            }`}
-          >
-            Projects
-          </li>
-          <li
-            onClick={(e) => headerItemClicked(e, "Contact")}
-            className={`header-list-item ${
-              activeTab === "Contact" && "active-li"
-            }`}
-          >
-            Contact
-          </li>
-          {/* <li
+        <li className="nav-links-container">
+          <ul className="nav-links">
+            <li
+              onClick={(e) => headerItemClicked(e, "About")}
+              className={`header-list-item ${
+                activeTab === "About" && "active-li"
+              }`}
+            >
+              About
+            </li>
+            <li
+              onClick={(e) => headerItemClicked(e, "Projects")}
+              className={`header-list-item ${
+                activeTab === "Projects" && "active-li"
+              }`}
+            >
+              Projects
+            </li>
+            <li
+              onClick={(e) => headerItemClicked(e, "Contact")}
+              className={`header-list-item ${
+                activeTab === "Contact" && "active-li"
+              }`}
+            >
+              Contact
+            </li>
+            {/* <li
               onClick={e => headerItemClicked(e, 'Articles')}
               className={`header-list-item ${activeTab === 'Articles' &&
                 'active-li'}`}
             >
               Articles
             </li> */}
-        </ul>
+          </ul>
+        </li>
       </ul>
     </div>
   );

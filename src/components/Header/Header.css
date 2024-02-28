@@ -22,6 +22,10 @@ ul li {
   margin-left: 20px;
 }
 
+.nav-links-container {
+  flex: 1;
+}
+
 .hamburger-icon {
   color: #000 !important;
   font-size: 25px;
