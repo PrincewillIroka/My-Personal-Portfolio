@@ -25,6 +25,17 @@ const TABS = [
       "https://i.imgur.com/4Wv19yY.png",
     ],
   },
+  {
+    title: "University Portal",
+    description: "A web app for a university website/portal.",
+    technologies: "React",
+    images: [
+      "https://i.imgur.com/1SUuBMf.png",
+      "https://i.imgur.com/zEfnG7N.png",
+      "https://i.imgur.com/seLtHVK.png",
+      "https://i.imgur.com/pZUSCCY.png",
+    ],
+  },
 ];
 
 const Projects = () => {
@@ -78,7 +89,7 @@ const Projects = () => {
   useEffect(() => {
     const slideTimeout = setTimeout(() => {
       showSlides(slideIndex + 1);
-    }, 2000); // Change image every 2 seconds
+    }, 3000); // Change image every 3 seconds
     return () => clearTimeout(slideTimeout);
   }, [showSlides, slideIndex, activeTab]);
 
