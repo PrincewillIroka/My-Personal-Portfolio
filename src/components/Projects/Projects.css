@@ -42,7 +42,7 @@
 
 .details-info {
   height: 30%;
-  padding-top: 40px;
+  padding-top: 25px;
 }
 
 .details-description {
@@ -57,6 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 7px;
 }
 
 .details-technologies-heading {
@@ -168,4 +169,43 @@
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.view-app-container {
+  display: flex;
+  justify-content: center;
+}
+
+.view-app-single {
+  border-radius: 50px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-app-live {
+  background-color: #f33b86;
+  margin-right: 30px;
+}
+
+.view-app-live:hover {
+  background-color: #fff;
+  border: 1px solid #f33b86;
+  color: #f33b86;
+}
+
+.view-app-github {
+  background-color: #000;
+}
+
+.view-app-github:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
 }

@@ -18,10 +18,13 @@ const Contact = () => {
     const name = e.target.name;
     const value = e.target.value;
     setState({
-      nameErrorField: false,
-      emailErrorField: false,
-      messageErrorField: false,
-      [name]: value,
+      ...state,
+      ...{
+        nameErrorField: false,
+        emailErrorField: false,
+        messageErrorField: false,
+        [name]: value,
+      },
     });
   };
 
@@ -74,9 +77,7 @@ const Contact = () => {
       <div className="hello-container">
         <div className="hello-wrapper">
           <span className="hello-text-1">Hello !</span>
-          <span className="hello-text-2">
-            feel free to reach out to me,
-          </span>
+          <span className="hello-text-2">feel free to reach out to me,</span>
           <span className="hello-text-3">for a project/consultation.</span>
         </div>
 
@@ -91,7 +92,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="form-container">
-        <span className="contact-title">Contact Me Now</span>
+        <span className="contact-title">Contact Me</span>
         <form>
           <span className="field-info">
             {state.nameErrorField ? "Please fill your name" : ""}
@@ -128,7 +129,9 @@ const Contact = () => {
               name="message"
             ></textarea>
           </div>
-          <button onClick={(e) => handleSubmit(e)} className="btn-submit">Submit</button>
+          <button onClick={(e) => handleSubmit(e)} className="btn-submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>
