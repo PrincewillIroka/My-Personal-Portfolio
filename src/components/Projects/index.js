@@ -146,6 +146,7 @@ const Projects = () => {
               <a
                 href={`${activeTab.liveLink}`}
                 target="_blank"
+                rel="noreferrer"
                 className="view-app-single view-app-live"
               >
                 View Live
@@ -155,6 +156,7 @@ const Projects = () => {
               <a
                 href={`${activeTab.githubLink}`}
                 target="_blank"
+                rel="noreferrer"
                 className="view-app-single view-app-github"
               >
                 Github
