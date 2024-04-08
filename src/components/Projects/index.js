@@ -13,6 +13,7 @@ const TABS = [
       "https://i.imgur.com/by7itrJ.png",
       "https://i.imgur.com/Z9tdGva.png",
     ],
+    liveLink: "https://quickchatt.netlify.app/",
   },
   {
     title: "World News App",
@@ -24,6 +25,8 @@ const TABS = [
       "https://i.imgur.com/9VJVhkx.png",
       "https://i.imgur.com/4Wv19yY.png",
     ],
+    liveLink: "https://worldnewsapp.netlify.com/",
+    githubLink: "https://github.com/PrincewillIroka/World-News",
   },
   {
     title: "University Portal",
@@ -35,6 +38,8 @@ const TABS = [
       "https://i.imgur.com/seLtHVK.png",
       "https://i.imgur.com/pZUSCCY.png",
     ],
+    liveLink: "https://university-portal.netlify.app/",
+    githubLink: "https://github.com/PrincewillIroka/university-portal",
   },
 ];
 
@@ -135,6 +140,26 @@ const Projects = () => {
             <span className="details-technologies-info">
               {activeTab.technologies}
             </span>
+          </div>
+          <div className="view-app-container">
+            {activeTab.liveLink && (
+              <a
+                href={`${activeTab.liveLink}`}
+                target="_blank"
+                className="view-app-single view-app-live"
+              >
+                View Live
+              </a>
+            )}
+            {activeTab.githubLink && (
+              <a
+                href={`${activeTab.githubLink}`}
+                target="_blank"
+                className="view-app-single view-app-github"
+              >
+                Github
+              </a>
+            )}
           </div>
         </div>
       </div>

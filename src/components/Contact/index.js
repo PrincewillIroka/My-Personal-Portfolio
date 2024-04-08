@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Contact.css";
 
+const REACT_APP_EMAIL_KEY = process.env.REACT_APP_EMAIL_KEY;
+
 const initialState = {
   name: "",
   email: "",
@@ -18,10 +20,13 @@ const Contact = () => {
     const name = e.target.name;
     const value = e.target.value;
     setState({
-      nameErrorField: false,
-      emailErrorField: false,
-      messageErrorField: false,
-      [name]: value,
+      ...state,
+      ...{
+        nameErrorField: false,
+        emailErrorField: false,
+        messageErrorField: false,
+        [name]: value,
+      },
     });
   };
 
@@ -42,21 +47,19 @@ const Contact = () => {
     } else {
       axios
         .post("https://mandrillapp.com/api/1.0/messages/send.json", {
-          data: {
-            key: "",
-            message: {
-              from_email: state.email,
-              to: [
-                {
-                  email: "princewilliroka@yahoo.com",
-                  name: state.name,
-                  type: "to",
-                },
-              ],
-              autotext: "true",
-              subject: `Princewill Iroka's Portfolio`,
-              html: state.message,
-            },
+          key: REACT_APP_EMAIL_KEY,
+          message: {
+            from_email: state.email,
+            to: [
+              {
+                email: "princewilliroka@yahoo.com",
+                name: state.name,
+                type: "to",
+              },
+            ],
+            autotext: "true",
+            subject: `Princewill Iroka's Portfolio`,
+            html: state.message,
           },
         })
         .then(function (response) {
@@ -74,9 +77,7 @@ const Contact = () => {
       <div className="hello-container">
         <div className="hello-wrapper">
           <span className="hello-text-1">Hello !</span>
-          <span className="hello-text-2">
-            feel free to reach out to me,
-          </span>
+          <span className="hello-text-2">feel free to reach out to me,</span>
           <span className="hello-text-3">for a project/consultation.</span>
         </div>
 
@@ -91,7 +92,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="form-container">
-        <span className="contact-title">Contact Me Now</span>
+        <span className="contact-title">Contact Me</span>
         <form>
           <span className="field-info">
             {state.nameErrorField ? "Please fill your name" : ""}
@@ -128,7 +129,9 @@ const Contact = () => {
               name="message"
             ></textarea>
           </div>
-          <button onClick={(e) => handleSubmit(e)} className="btn-submit">Submit</button>
+          <button onClick={(e) => handleSubmit(e)} className="btn-submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>
