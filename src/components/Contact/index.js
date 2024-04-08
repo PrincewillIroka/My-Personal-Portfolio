@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Contact.css";
 
+const REACT_APP_EMAIL_KEY = process.env.REACT_APP_EMAIL_KEY;
+
 const initialState = {
   name: "",
   email: "",
@@ -45,21 +47,19 @@ const Contact = () => {
     } else {
       axios
         .post("https://mandrillapp.com/api/1.0/messages/send.json", {
-          data: {
-            key: "",
-            message: {
-              from_email: state.email,
-              to: [
-                {
-                  email: "princewilliroka@yahoo.com",
-                  name: state.name,
-                  type: "to",
-                },
-              ],
-              autotext: "true",
-              subject: `Princewill Iroka's Portfolio`,
-              html: state.message,
-            },
+          key: REACT_APP_EMAIL_KEY,
+          message: {
+            from_email: state.email,
+            to: [
+              {
+                email: "princewilliroka@yahoo.com",
+                name: state.name,
+                type: "to",
+              },
+            ],
+            autotext: "true",
+            subject: `Princewill Iroka's Portfolio`,
+            html: state.message,
           },
         })
         .then(function (response) {
