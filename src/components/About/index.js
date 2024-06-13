@@ -6,7 +6,7 @@ import photo1 from "../../assets/images/GitHub-Mark.png";
 import photo2 from "../../assets/images/LI-In-Bug.png";
 import photo3 from "../../assets/images/Stack_Overflow_icon.png";
 import photo4 from "../../assets/images/dev.to-icon.png";
-import "./About.scss";
+import "./About.css";
 
 const About = () => {
   const dispatch = useDispatch();

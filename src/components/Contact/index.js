@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="about-container">
+    <div className="contact-container">
       <div className="hello-container">
         <div className="hello-wrapper">
           <span className="hello-text-1">Hello !</span>
