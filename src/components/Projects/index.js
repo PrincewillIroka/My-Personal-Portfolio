@@ -8,9 +8,9 @@ const TABS = [
       "An app that helps you start a quick chat with anyone instantly.",
     technologies: "React, Node JS, Express.js, Mongo DB, Redis",
     images: [
-      "https://i.imgur.com/7B79DWr.png",
-      "https://i.imgur.com/eNfmDvu.png",
       "https://i.imgur.com/by7itrJ.png",
+      "https://i.imgur.com/eNfmDvu.png",
+      "https://i.imgur.com/7B79DWr.png",
       "https://i.imgur.com/Z9tdGva.png",
     ],
     liveLink: "https://quickchatt.netlify.app/",
@@ -60,7 +60,7 @@ const Projects = () => {
 
   const showSlides = useCallback((n) => {
     let i, slideIndexCopy;
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("all-slides");
     if (n > slides.length) {
       slideIndexCopy = 1;
     } else if (n < 1) {
@@ -119,8 +119,8 @@ const Projects = () => {
       <div className="details">
         <div className="slideshow-container">
           {activeTab.images.map((aImg, index) => (
-            <div className="mySlides fade" key={index}>
-              <img src={aImg} alt="" className="imgSlide" />
+            <div className="all-slides fade" key={index}>
+              <img src={aImg} alt="" className="img-slide" />
             </div>
           ))}
 
@@ -141,13 +141,13 @@ const Projects = () => {
               {activeTab.technologies}
             </span>
           </div>
-          <div className="view-app-container">
+          <div className="details-app-container">
             {activeTab.liveLink && (
               <a
                 href={`${activeTab.liveLink}`}
                 target="_blank"
                 rel="noreferrer"
-                className="view-app-single view-app-live"
+                className="details-app-single details-app-live"
               >
                 View Live
               </a>
@@ -157,7 +157,7 @@ const Projects = () => {
                 href={`${activeTab.githubLink}`}
                 target="_blank"
                 rel="noreferrer"
-                className="view-app-single view-app-github"
+                className="details-app-single details-app-github"
               >
                 Github
               </a>
