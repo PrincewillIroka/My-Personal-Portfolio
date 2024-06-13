@@ -25,7 +25,7 @@ const TABS = [
       "https://i.imgur.com/9VJVhkx.png",
       "https://i.imgur.com/4Wv19yY.png",
     ],
-    liveLink: "https://worldnewsapp.netlify.com/",
+    liveLink: "https://worldnewsapp.netlify.app/",
     githubLink: "https://github.com/PrincewillIroka/World-News",
   },
   {
