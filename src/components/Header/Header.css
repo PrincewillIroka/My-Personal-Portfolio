@@ -19,7 +19,7 @@ ul li {
 
 .hamburger-btn {
   display: none;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .nav-links-container {
@@ -49,8 +49,13 @@ ul li {
     display: block !important;
   }
 
-  .hamburger-btn,
-  .headerLi {
-    margin-right: 40px !important;
+  .header-list-item {
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-list-item {
+    margin-right: 30px;
   }
 }

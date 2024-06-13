@@ -14,22 +14,14 @@ const Container = () => {
   const isMobileView = useSelector((state) => state.isMobileView);
 
   useEffect(() => {
-    if (pageWidth > 1070 && isMobileView) {
+    if (pageWidth > 1070) {
       dispatch(toggleMobileView(false));
     }
   }, [dispatch, isMobileView, pageWidth]);
 
   return (
     <div className="container">
-      <div
-        className={`${
-          !isMobileView
-            ? pageWidth < 1070
-              ? "hidden-sidebar"
-              : "sidebar"
-            : "fixed-sidebar"
-        }`}
-      >
+      <div className={`${isMobileView ? "fixed-sidebar" : "sidebar"}`}>
         <Sidebar />
       </div>
       <MainLayout />
