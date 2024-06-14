@@ -22,7 +22,7 @@ const Sidebar = () => {
       <div className="n-container">
         <img src={photo} alt="Portfolio" className="portfolio-picture" />
         <span className="f-span">Princewill Iroka</span>
-        <span className="s-span">Senior Software Engineer</span>
+        <span className="s-span">Fullstack Software Engineer</span>
         <div className="skills-wrapper">
           <div className="p-div">
             <span>
