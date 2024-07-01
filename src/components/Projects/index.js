@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useSelector } from "react-redux";
 import "./Projects.css";
 
 const TABS = [
@@ -46,6 +47,9 @@ const TABS = [
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(TABS[0]);
   const [slideIndex, setSlideIndex] = useState(1);
+  const isMobileView = useSelector((state) => state.isMobileView);
+
+  console.log({ isMobileView });
 
   const handleTabChange = (value) => {
     const foundTab = TABS.find((tab) => tab.title === value);
