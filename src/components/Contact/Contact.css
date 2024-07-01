@@ -91,7 +91,7 @@ input {
 
 .field-info {
   font-size: 13px;
-  color: #f33b86;
+  color: #344966;
 }
 
 .message-field-wrapper {
@@ -115,7 +115,7 @@ textarea {
 }
 
 .btn-submit {
-  background-color: #f33b86;
+  background-color: #344966;
   border-radius: 50px;
   padding: 15px 0;
   color: #fff;
@@ -128,8 +128,8 @@ textarea {
 
 .btn-submit:hover {
   background-color: #fff;
-  border: 1px solid #f33b86;
-  color: #f33b86;
+  border: 1px solid #344966;
+  color: #344966;
 }
 
 @media (max-width: 992px) {

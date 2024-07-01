@@ -72,7 +72,7 @@
 }
 
 .hire-span {
-  background-color: #f33b86;
+  background-color: #344966;
   border-radius: 50px;
   padding: 15px 40px;
   color: #fff;
@@ -83,19 +83,19 @@
 
 .hire-span:hover {
   background-color: #fff;
-  border: 1px solid #f33b86;
-  color: #f33b86;
+  border: 1px solid #344966;
+  color: #344966;
 }
 
 .resume-link {
-  border: 1px solid #f33b86;
+  border: 1px solid #344966;
   border-radius: 50px;
   padding: 15px 30px;
-  color: #f33b86;
+  color: #344966;
 }
 
 .resume-link:hover {
-  background-color: #f33b86;
+  background-color: #344966;
   border: 1px solid transparent;
   color: #fff;
 }

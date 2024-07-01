@@ -2,7 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Sidebar.css";
 import photo from "../../assets/images/portfolio_pic_new.jpg";
-import { toggleMobileView } from "../../store/actions";
+import {
+  toggleMobileView,
+  toggleClickedHamburgerBtn,
+} from "../../store/actions";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
@@ -10,6 +13,7 @@ const Sidebar = () => {
 
   const closeSidebar = () => {
     dispatch(toggleMobileView(false));
+    dispatch(toggleClickedHamburgerBtn());
   };
 
   return (
@@ -22,7 +26,7 @@ const Sidebar = () => {
       <div className="n-container">
         <img src={photo} alt="Portfolio" className="portfolio-picture" />
         <span className="f-span">Princewill Iroka</span>
-        <span className="s-span">Senior Software Engineer</span>
+        <span className="s-span">Fullstack Software Engineer</span>
         <div className="skills-wrapper">
           <div className="p-div">
             <span>

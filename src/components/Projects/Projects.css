@@ -24,7 +24,7 @@
 }
 
 .active-title {
-  background: #f33b86;
+  background: #344966;
   color: #fff;
   opacity: 1;
 }
@@ -189,24 +189,38 @@
 }
 
 .details-app-live {
-  background-color: #f33b86;
-  margin-right: 30px;
+  background-color: #344966;
 }
 
 .details-app-live:hover {
   background-color: #fff;
-  border: 1px solid #f33b86;
-  color: #f33b86;
+  border: 1px solid #344966;
+  color: #344966;
 }
 
 .details-app-github {
-  background-color: #000;
+  background-color: #fff;
+  border: 1px solid #344966;
+  color: #344966;
+  margin-left: 15px;
 }
 
 .details-app-github:hover {
+  background-color: #344966;
+  color: #ffffff;
+}
+
+.details-app-next {
   background-color: #fff;
-  border: 1px solid #000;
-  color: #000;
+  border: 1px solid #f44e91;
+  color: #f44e91;
+  width: 120px;
+  margin-left: 15px;
+}
+
+.details-app-next:hover {
+  background-color: #f44e91;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
