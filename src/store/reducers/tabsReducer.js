@@ -1,28 +1,37 @@
-import * as Actions from '../actions'
+import * as Actions from "../actions";
 
 const initialState = {
-  activeTab: 'About',
-  isMobileView: false
-}
+  activeTab: "About",
+  isMobileView: false,
+  hasClickedHamburgerBtn: false,
+};
 
 const tabsReducer = (state = initialState, action) => {
   switch (action.type) {
     case Actions.CHANGE_ACTIVE_TAB: {
       return {
         ...state,
-        activeTab: action.payload
-      }
+        activeTab: action.payload,
+      };
     }
     case Actions.CHANGE_MOBILE_VIEW: {
       return {
         ...state,
-        isMobileView: action.payload
-      }
+        isMobileView: action.payload,
+      };
+    }
+    case Actions.HAS_CLICKED_HAMBURGER_BTN: {
+      let { hasClickedHamburgerBtn } = state;
+      hasClickedHamburgerBtn = !hasClickedHamburgerBtn;
+      return {
+        ...state,
+        hasClickedHamburgerBtn,
+      };
     }
     default: {
-      return state
+      return state;
     }
   }
-}
+};
 
-export default tabsReducer
+export default tabsReducer;

@@ -1,6 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleActiveTab, toggleMobileView } from "../../store/actions";
+import {
+  toggleActiveTab,
+  toggleClickedHamburgerBtn,
+} from "../../store/actions";
 import "./Header.css";
 
 const Header = () => {
@@ -12,7 +15,8 @@ const Header = () => {
   };
 
   const openSidebar = () => {
-    dispatch(toggleMobileView(true));
+    // dispatch(toggleMobileView(true));
+    dispatch(toggleClickedHamburgerBtn());
   };
 
   return (

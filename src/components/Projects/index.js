@@ -46,16 +46,16 @@ const TABS = [
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(TABS[0]);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [slideIndex, setSlideIndex] = useState(1);
   const isMobileView = useSelector((state) => state.isMobileView);
 
-  console.log({ isMobileView });
-
-  const handleTabChange = (value) => {
-    const foundTab = TABS.find((tab) => tab.title === value);
+  const handleTabChange = (nextIndex) => {
+    const foundTab = TABS.find((tab, index) => index === nextIndex);
     handleSlideshow();
     setSlideIndex(1);
     setActiveTab(foundTab);
+    setActiveTabIndex(nextIndex);
   };
 
   const isActiveTab = (value) => {
@@ -102,6 +102,14 @@ const Projects = () => {
     return () => clearTimeout(slideTimeout);
   }, [showSlides, slideIndex, activeTab]);
 
+  const handleNextProject = () => {
+    let nextIndex = activeTabIndex + 1;
+    if (activeTabIndex === TABS.length - 1) {
+      nextIndex = 0;
+    }
+    handleTabChange(nextIndex);
+  };
+
   return (
     <div className="projects-container">
       <div className="title-tab">
@@ -109,7 +117,7 @@ const Projects = () => {
           <span
             onClick={(e) => {
               e.preventDefault();
-              handleTabChange(tab.title);
+              handleTabChange(index);
             }}
             className={`single-title ${
               isActiveTab(tab.title) && "active-title"
@@ -165,6 +173,14 @@ const Projects = () => {
               >
                 Github
               </a>
+            )}
+            {isMobileView && (
+              <button
+                className="details-app-single details-app-next"
+                onClick={() => handleNextProject()}
+              >
+                Next Project
+              </button>
             )}
           </div>
         </div>
