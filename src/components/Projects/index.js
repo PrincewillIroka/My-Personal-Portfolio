@@ -144,7 +144,12 @@ const Projects = () => {
           </button>
         </div>
         <div className="details-info">
-          <span className="details-description">{activeTab.description}</span>
+          <div className="details-description-wrapper">
+            {isMobileView && (
+              <span className="details-title">{activeTab.title}:</span>
+            )}
+            <span className="details-description">{activeTab.description}</span>
+          </div>
           <div className="details-technologies">
             <h5 className="details-technologies-heading">
               Technologies used:&nbsp;
