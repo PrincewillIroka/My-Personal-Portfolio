@@ -65,10 +65,17 @@
   flex-direction: column;
 }
 
-.details-description {
-  text-align: center;
-  font-size: 16px;
+.details-description-wrapper {
+  display: flex;
   margin-bottom: 7px;
+  justify-content: center;
+  font-size: 16px;
+  align-items: center;
+}
+
+.details-title {
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 .details-technologies {
@@ -238,6 +245,10 @@
   }
 
   .details-technologies {
+    flex-direction: column;
+  }
+
+  .details-description-wrapper {
     flex-direction: column;
   }
 }
