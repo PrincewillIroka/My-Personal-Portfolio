@@ -38,6 +38,7 @@
   /* border: 1px solid #ccc; */
   /* justify-content: center; */
   align-items: center;
+  overflow-y: auto;
 }
 
 .slideshow-container {
@@ -59,7 +60,6 @@
 }
 
 .details-info {
-  height: 20vh;
   padding-top: 10px;
   display: flex;
   flex-direction: column;
@@ -232,16 +232,6 @@
   color: #ffffff;
 }
 
-@media (max-width: 1080px) {
-  .details-app-next {
-    display: block;
-  }
-
-  .details-title {
-    display: block;
-  }
-}
-
 @media (max-width: 768px) {
   .title-tab {
     display: none;
@@ -254,6 +244,8 @@
 
   .slideshow-container {
     height: 60vh;
+    width: 100%;
+    padding: 0 20px;
   }
 
   .details-technologies {
@@ -262,5 +254,17 @@
 
   .details-description-wrapper {
     flex-direction: column;
+  }
+
+  .details-app-next {
+    display: block;
+  }
+
+  .details-title {
+    display: block;
+  }
+
+  .next {
+    right: 20px;
   }
 }
