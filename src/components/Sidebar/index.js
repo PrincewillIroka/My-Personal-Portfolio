@@ -11,7 +11,7 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   const isMobileView = useSelector((state) => state.isMobileView);
 
-  const closeSidebar = () => {
+  const handleSidebar = () => {
     dispatch(toggleMobileView(false));
     dispatch(toggleClickedHamburgerBtn());
   };
@@ -20,7 +20,7 @@ const Sidebar = () => {
     <div className="portfolio-container">
       {isMobileView && (
         <div className="top-container">
-          <i className="fas fa-times" onClick={() => closeSidebar()}></i>
+          <i className="fas fa-times" onClick={() => handleSidebar()}></i>
         </div>
       )}
       <div className="n-container">

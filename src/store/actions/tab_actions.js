@@ -14,5 +14,4 @@ export const toggleMobileView = (value) => ({
 
 export const toggleClickedHamburgerBtn = (value) => ({
   type: HAS_CLICKED_HAMBURGER_BTN,
-  payload: value,
 });
