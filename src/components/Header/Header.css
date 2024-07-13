@@ -44,7 +44,7 @@ ul li {
   border-bottom: 3px solid #f44e91;
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1080px) {
   .hamburger-btn {
     display: block !important;
   }

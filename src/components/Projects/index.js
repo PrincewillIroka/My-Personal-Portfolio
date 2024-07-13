@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useSelector } from "react-redux";
 import "./Projects.css";
 
 const TABS = [
@@ -61,7 +60,6 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState(TABS[0]);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [slideIndex, setSlideIndex] = useState(0);
-  const isMobileView = useSelector((state) => state.isMobileView);
 
   const handleTabChange = (nextIndex) => {
     const foundTab = TABS[nextIndex];
@@ -151,9 +149,7 @@ const Projects = () => {
         </div>
         <div className="details-info">
           <div className="details-description-wrapper">
-            {isMobileView && (
-              <span className="details-title">{activeTab.title}:</span>
-            )}
+            <span className="details-title">{activeTab.title}:</span>
             <span className="details-description">{activeTab.description}</span>
           </div>
           <div className="details-technologies">
@@ -185,14 +181,12 @@ const Projects = () => {
                 Github
               </a>
             )}
-            {isMobileView && (
-              <button
-                className="details-app-single details-app-next"
-                onClick={() => handleNextProject()}
-              >
-                Next Project
-              </button>
-            )}
+            <button
+              className="details-app-single details-app-next"
+              onClick={() => handleNextProject()}
+            >
+              Next Project
+            </button>
           </div>
         </div>
       </div>

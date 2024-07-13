@@ -16,9 +16,9 @@ const Container = () => {
   );
 
   useEffect(() => {
-    if (pageWidth > 1070) {
+    if (pageWidth > 1080) {
       dispatch(toggleMobileView(false));
-    } else if (pageWidth <= 1070) {
+    } else if (pageWidth <= 1080) {
       dispatch(toggleMobileView(true));
     }
   }, [dispatch, isMobileView, pageWidth]);
