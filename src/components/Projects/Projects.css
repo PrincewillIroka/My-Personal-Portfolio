@@ -76,6 +76,7 @@
 .details-title {
   font-weight: bold;
   margin-right: 5px;
+  display: none;
 }
 
 .details-technologies {
@@ -223,11 +224,22 @@
   color: #f44e91;
   width: 120px;
   margin-left: 15px;
+  display: none;
 }
 
 .details-app-next:hover {
   background-color: #f44e91;
   color: #ffffff;
+}
+
+@media (max-width: 1080px) {
+  .details-app-next {
+    display: block;
+  }
+
+  .details-title {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
