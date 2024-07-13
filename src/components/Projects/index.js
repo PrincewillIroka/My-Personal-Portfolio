@@ -60,15 +60,14 @@ const TABS = [
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(TABS[0]);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [slideIndex, setSlideIndex] = useState(1);
+  const [slideIndex, setSlideIndex] = useState(0);
   const isMobileView = useSelector((state) => state.isMobileView);
 
   const handleTabChange = (nextIndex) => {
-    const foundTab = TABS.find((tab, index) => index === nextIndex);
-    handleSlideshow();
-    setSlideIndex(1);
+    const foundTab = TABS[nextIndex];
     setActiveTab(foundTab);
     setActiveTabIndex(nextIndex);
+    showSlides(0);
   };
 
   const isActiveTab = (value) => {
@@ -78,42 +77,35 @@ const Projects = () => {
   const showSlides = useCallback((n) => {
     let i, slideIndexCopy;
     let slides = document.getElementsByClassName("all-slides");
-    if (n > slides.length) {
-      slideIndexCopy = 1;
-    } else if (n < 1) {
-      slideIndexCopy = slides.length;
+    if (n === slides.length) {
+      slideIndexCopy = 0;
     } else {
       slideIndexCopy = n;
     }
     for (i = 0; i < slides.length; i++) {
-      if (slides[i]) {
+      if (i === slideIndexCopy) {
+        slides[i].style.display = "block";
+      } else {
         slides[i].style.display = "none";
       }
     }
-    if (slides[slideIndexCopy - 1]) {
-      slides[slideIndexCopy - 1].style.display = "block";
-    }
     setSlideIndex(slideIndexCopy);
   }, []);
-
-  const handleSlideshow = useCallback(() => {
-    showSlides(1);
-  }, [showSlides]);
 
   function plusSlides(n) {
     showSlides(slideIndex + n);
   }
 
   useEffect(() => {
-    handleSlideshow();
-  }, [handleSlideshow]);
+    showSlides(0);
+  }, [showSlides]);
 
   useEffect(() => {
     const slideTimeout = setTimeout(() => {
       showSlides(slideIndex + 1);
     }, 3000); // Change image every 3 seconds
     return () => clearTimeout(slideTimeout);
-  }, [showSlides, slideIndex, activeTab]);
+  }, [showSlides, slideIndex]);
 
   const handleNextProject = () => {
     let nextIndex = activeTabIndex + 1;
@@ -129,7 +121,6 @@ const Projects = () => {
         {TABS.map((tab, index) => (
           <span
             onClick={(e) => {
-              e.preventDefault();
               handleTabChange(index);
             }}
             className={`single-title ${
@@ -149,9 +140,11 @@ const Projects = () => {
             </div>
           ))}
 
-          <button className="prev" onClick={() => plusSlides(-1)}>
-            ❮
-          </button>
+          {slideIndex > 0 && (
+            <button className="prev" onClick={() => plusSlides(-1)}>
+              ❮
+            </button>
+          )}
           <button className="next" onClick={() => plusSlides(1)}>
             ❯
           </button>
