@@ -35,8 +35,6 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid #ccc; */
-  /* justify-content: center; */
   align-items: center;
   overflow-y: auto;
 }
@@ -262,6 +260,10 @@
 
   .details-title {
     display: block;
+  }
+
+  .details-description {
+    text-align: center;
   }
 
   .next {
