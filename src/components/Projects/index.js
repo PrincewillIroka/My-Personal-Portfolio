@@ -17,6 +17,19 @@ const TABS = [
     liveLink: "https://quickchatt.netlify.app/",
   },
   {
+    title: "Ticket Zone",
+    description: "A web app to Sell/Buy event tickets easily.",
+    technologies: "React, Node JS, Hapi.js, Mongo DB",
+    images: [
+      "https://imgur.com/jZa7Dr0.png",
+      "https://imgur.com/L8qaS5g.png",
+      "https://imgur.com/ix0m7UY.png",
+      "https://imgur.com/uDOnxx6.png",
+    ],
+    liveLink: "https://ticket-zone.vercel.app/",
+    githubLink: "https://github.com/PrincewillIroka/TicketZone",
+  },
+  {
     title: "World News App",
     description: "News from top sites around the world",
     technologies: "React, News API",
