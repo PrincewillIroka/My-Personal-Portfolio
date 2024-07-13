@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   toggleActiveTab,
   toggleClickedHamburgerBtn,
+  toggleMobileView,
 } from "../../store/actions";
 import "./Header.css";
 
@@ -15,7 +16,7 @@ const Header = () => {
   };
 
   const openSidebar = () => {
-    // dispatch(toggleMobileView(true));
+    dispatch(toggleMobileView(true));
     dispatch(toggleClickedHamburgerBtn());
   };
 
