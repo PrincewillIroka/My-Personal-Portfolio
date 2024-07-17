@@ -13,7 +13,7 @@ const TABS = [
       "https://i.imgur.com/7B79DWr.png",
       "https://i.imgur.com/Z9tdGva.png",
     ],
-    liveLink: "https://quickchatt.netlify.app/",
+    liveLink: "https://quick-chatt.netlify.app/",
   },
   {
     title: "Ticket Zone",
