@@ -48,7 +48,7 @@ const Sidebar = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/PrincewillIroka"
+            href="https://github.com/PrincewillIroka/My-Personal-Portfolio"
             className="link-owner"
           >
             <b> Princewill Iroka </b>
