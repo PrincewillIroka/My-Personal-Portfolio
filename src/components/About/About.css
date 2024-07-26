@@ -9,61 +9,66 @@
   padding: 0 20% 0;
 }
 
-.parent-container > span:nth-child(1) {
+.about-text-1 {
   color: #707070;
   font-size: 17px;
   font-family: "Rubik", sans-serif;
 }
 
-.parent-container > span:nth-child(2) {
+.about-text-2 {
   color: #f44e91;
   font-weight: bold;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
 }
 
-.parent-container > span:nth-child(3) {
+.about-text-3 {
   color: #707070;
   font-family: "Rubik", sans-serif;
   font-size: 17px;
 }
 
-.parent-container > span:nth-child(4) {
+.about-text-4 {
   color: #707070;
   font-family: "Fira Sans", sans-serif;
   font-size: 18px;
 }
 
-.parent-container > span:nth-child(2),
-.parent-container > span:nth-child(3),
-.parent-container > span:nth-child(4) {
+.about-text-2,
+.about-text-3,
+.about-text-4 {
   margin-top: 25px;
 }
 
-.parent-container > div:nth-child(5) {
+.find-me-on-link-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.parent-container > div:nth-child(5) > a:nth-child(1) img {
-  height: 40px;
-  width: 40px;
-}
-
-.parent-container > div:nth-child(5) > a:nth-child(2) img {
-  height: 50px;
-  width: 50px;
-}
-
-.parent-container > div:nth-child(5) > a:nth-child(3) img {
+.find-me-on-link:nth-child(1) img {
   height: 35px;
   width: 45px;
 }
 
-.parent-container > div:nth-child(5) > a:nth-child(4) img {
+.find-me-on-link:nth-child(2) img {
+  height: 50px;
+  width: 50px;
+}
+
+.find-me-on-link:nth-child(3) img {
+  height: 35px;
+  width: 45px;
+}
+
+.find-me-on-link:nth-child(4) img {
   height: 35px;
   width: 35px;
+}
+
+.find-me-on-link:nth-child(5) img {
+  height: 40px;
+  width: 40px;
 }
 
 .c-t-div {

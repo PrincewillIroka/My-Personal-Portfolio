@@ -25,32 +25,19 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="parent-container">
-        <span>Hello, I'm</span>
-        <span>Princewill Iroka</span>
-        <span>
+        <span className="about-text-1">Hello, I'm</span>
+        <span className="about-text-2">Princewill Iroka</span>
+        <span className="about-text-3">
           I am a productive Fullstack Software Developer who is passionate about
           developing scalable, maintainable, cutting-edge web and mobile apps.
           Using flexible modern Software Architecture principles, I can work in
           a team or with minimal supervision to deliver high quality software
           products that meets and exceeds users' expectation.
         </span>
-        <span>Find Me on</span>
-        <div>
+        <span className="about-text-4">Find Me on:</span>
+        <div className="find-me-on-link-container">
           <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/PrincewillIroka"
-          >
-            <img src={photo} alt="Twitter" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/PrincewillIroka"
-          >
-            <img src={photo1} alt="GitHub" />
-          </a>
-          <a
+            className="find-me-on-link"
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/princewill-iroka-19865784/"
@@ -58,6 +45,15 @@ const About = () => {
             <img src={photo2} alt="LinkedIn" />
           </a>
           <a
+            className="find-me-on-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/PrincewillIroka"
+          >
+            <img src={photo1} alt="GitHub" />
+          </a>
+          <a
+            className="find-me-on-link"
             target="_blank"
             rel="noopener noreferrer"
             href="https://stackoverflow.com/users/5994977/princewill-iroka"
@@ -65,11 +61,20 @@ const About = () => {
             <img src={photo3} alt="Stackoverflow" />
           </a>
           <a
+            className="find-me-on-link"
             target="_blank"
             rel="noopener noreferrer"
             href="https://dev.to/princewilliroka"
           >
             <img src={photo4} alt="Dev.to" />
+          </a>
+          <a
+            className="find-me-on-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/PrincewillIroka"
+          >
+            <img src={photo} alt="Twitter" />
           </a>
         </div>
         <div className="c-t-div">
