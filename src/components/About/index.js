@@ -28,7 +28,7 @@ const About = () => {
         <span className="about-text-1">Hello, I'm</span>
         <span className="about-text-2">Princewill Iroka</span>
         <span className="about-text-3">
-          I am a productive Fullstack Software Developer who is passionate about
+          I am a productive Fullstack Software Engineer who is passionate about
           developing scalable, maintainable, cutting-edge web and mobile apps.
           Using flexible modern Software Architecture principles, I can work in
           a team or with minimal supervision to deliver high quality software
