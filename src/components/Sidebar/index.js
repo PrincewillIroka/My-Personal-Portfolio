@@ -26,11 +26,11 @@ const Sidebar = () => {
       <div className="n-container">
         <img src={photo} alt="Portfolio" className="portfolio-picture" />
         <span className="f-span">Princewill Iroka</span>
-        <span className="s-span">Fullstack Software Engineer</span>
+        <span className="s-span">Software Engineer</span>
         <div className="skills-wrapper">
           <div className="p-div">
             <span>
-              <i className="fas fa-dot-circle"></i>React, React Native
+              <i className="fas fa-dot-circle"></i>React, Next.js
             </span>
             <span>
               <i className="fas fa-dot-circle"></i>Node JS (Express.js, Hapi.js)
