@@ -78,12 +78,12 @@ const About = () => {
           </a>
         </div>
         <div className="c-t-div">
-          <span
-            className="hire-span"
+          <button
+            className="btn-contact"
             onClick={(e) => roundButtonClick(e, "Contact")}
           >
-            HIRE ME
-          </span>
+            CONTACT ME
+          </button>
           {/* <a className="resume-link" target="_blank" href="https://drive.google.com/open?id=1uBx5NHt0po_osHWxYuaeVDCDvzGDR8Rl">
                 MY RESUME
               </a> */}
